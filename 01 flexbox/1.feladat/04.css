@@ -1,0 +1,27 @@
+#container{
+    width: 600px;
+    height: 500px;
+    display: flex;
+    background-color: aqua;
+    flex-direction: column;
+}
+
+.item{
+    height: 100%;
+}
+
+.green{
+    background-color: green;
+    flex: 1;
+}
+
+.yellow{
+    background-color: yellow;
+    flex: 2;
+    order: 3;
+}
+
+.purple{
+    background-color: purple;
+    flex: 1;
+}

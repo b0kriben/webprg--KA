@@ -1,0 +1,25 @@
+#container{
+    width: 100%;
+    height: 50px;
+    display: flex;
+    background-color: purple;
+    flex-direction: row;
+}
+
+#container2{
+    width: 100%;
+    height: 500px;
+    display: flex;
+    background-color: yellow;
+    flex-direction: row;
+}
+
+.item{
+    height: 100%;
+    background-color: aqua;
+    width: 100px;
+    height: 30px;
+    margin-left: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
