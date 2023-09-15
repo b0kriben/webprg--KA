@@ -1,0 +1,60 @@
+#container{
+    width: 100%;
+    height: 70px;
+    display: flex;
+    background-color: purple;
+    flex-direction: row;
+}
+
+.item{
+    height: 100%;
+    background-color: aqua;
+    width: 100px;
+    height: 30px;
+    margin-left: 20px;
+    margin-top: 20px;
+}
+
+#containerYellowGreen{
+    width: 100%;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+.itemYellowGreen{
+    height: 100%;
+    width: 50%;
+    height: 500px;
+}
+
+.yellow{
+    background-color: yellow;
+    flex: 1;
+}
+
+.green{
+    background-color: green;
+    flex: 1;
+}
+
+#containerGrey{
+    width: 100%;
+    height: 50px;
+    display: flex;
+    flex-direction: row;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+.itemGrey{
+    height: 100%;
+    width: 100%;
+    height: 50px;
+}
+
+.grey{
+    background-color: grey;
+}
