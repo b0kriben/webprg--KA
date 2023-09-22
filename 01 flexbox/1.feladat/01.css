@@ -12,12 +12,15 @@
 
 .green{
     background-color: green;
+    flex: 1;
 }
 
 .yellow{
     background-color: yellow;  
+    flex: 1;
 }
 
 .purple{
-    background-color: purple;   
+    background-color: purple;  
+    flex: 1; 
 }
