@@ -1,0 +1,17 @@
+Téma: a weboldal elemeinek elérése és manipulálása a JavaScript kódban (folytatás) - gyakorlati feladatok
+
+Feladatok:
+űrlapok elérése mint a documentum elemei: ld. document.forms
+- egy konkrét űrlap elérése: ld. document.forms[id-érték]
+- az űrlapon belül már elérhetővé válnak az elemek akár id-juk, akár az őket definiáló HTML-tagjuk, akár szelektor alapján: ld. document.forms[id-érték].querySelectorAll(css-szelektor) --> eredménye: NodeList vagy HTMLCollection
+- szükség esetén a kapott NodeList vagy HTML Collection (ez a forrás) könnyen tömbbé alakítható: ld. Array.from(forrás)
+
+rádiógombok elérési és kezelési módjai
+- elérési lehetőségek: alapvetően a közös name értékkel (ami szükséges a rádiógombok közös használatához -getElementsByName), tagnévvel (getElementsByTagName) vagy szelektorral (querySelectorAll - input[type="radio"])
+- jelöltség figyelése: checked állapot ellenőrzésével
+- mivel csak egy lehet jelölt, így csak egy elemmel kell foglalkozni (hanyadik volt jelölve (ld. indexe), tárol értéke (ld. value)
+- folytatás: hogyan lehetne a felhasználótól bekérni lehetőséget és abból készíteni rádiógombot? (következő óra anyaga)
+
+jelölőnégyzetek elérési és kezelési  módjai
+- hasonló az elérése a rádiógombokéhoz, de name általi elérés nem megfelelő (inkább tagnévvel vagy szelektorral)
+- jelöltség figyelése: checked állapot ellenőrzésével --> több jelölőnégyzet is megkaphatja !! --> a kiértékelésnél erre tekintettel kell lenni

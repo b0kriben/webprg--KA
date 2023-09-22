@@ -1,0 +1,235 @@
+<!doctype html>
+<html lang="hu">
+<head>
+    <meta charset="utf-8">
+    <title>DOM minta</title>
+    <style>
+        .mostbeszurt { font-style: italic; font-weight: bold; color:darkgreen;}
+        .elorebeszurt { text-transform:capitalize; color: red;}
+
+    </style>
+</head>
+
+<body>
+    <h1>Főcím</h1>
+    <p id="bev">Ez a bekezdés      tartalmazza a   <b>bevezető szövegét</b>, ezért    ennek    <span class="kiemelt">azonosítót (bev)</span>     adtunk.</p>
+    <p class="szov">Még egy bekezdés, de ez osztályba ("szov") van besorolva.</p>
+
+    <script>
+        // a "bev" azonosítójú HTML elem (objektum)
+        // ellenőrzés a konzolon: érték és típus kiiratása
+        
+
+
+        // a "bev" azonosítójú HTML elem (objektum) HTML tartalma
+        // .innerHTML
+        // ellenőrzés a konzolon: érték és típus kiiratása
+
+  
+
+        // a "bev" azonosítójú HTM elem (objektum) szövegtartalma (többszörözött szóközökkel)
+        // .textContent
+        // ellenőrzés a konzolon: érték és típus kiiratása
+
+    
+
+
+        // a "bev" azonosítójú HTM elem (objektum) szövegtartalma
+        // (a többszörözött szóközök eltávolításával és leszármazottakkal)
+        // .innerText
+    
+
+    </script>
+
+
+
+
+
+
+    <ul id="lista1">
+        <li>első listaelem</li>
+        <li class="szov">második ("szov" osztályú) listaelem</li>
+        <li>harmadik listaelem</li>
+        <li>negyedik listaelem</li>
+    </ul>
+    <div id="be">
+        <p>Kérem, adja meg a beszúrandó, új listaelem tartalmát: </p>
+        <input type="text" id="ujtartalom">
+        <button onclick="ujElemetBeszur()">Új listaelem beszúrása</button>
+    </div>
+    <div id="be2">
+        <p>Kérem, adja meg az első helyre beszúrandó, új listaelem tartalmát: </p>
+        <input type="text" id="ujtartalom2">
+        <button onclick="ujElemetEloreBeszur()">Új listaelem beszúrása a lista elejére</button>
+    </div>
+
+    <script>
+        function ujElemetBeszur() {
+          // beolvassuk az új tartalmat
+
+          // elrejtjük a beolvasási felületet
+
+          // létrehozzuk az új tagot
+
+          // létrehozzuk az új elem tartalmát
+
+          // létrehozzuk az új HTML elemet a tartalmával
+
+          // megadhatunk számára új attribútumokat is
+
+          // beazonosítjuk a beszúrási helyet (lista1) és elhelyezzük annak utolsó elemeként
+
+          // bizonyos idő múlva ismét megjelenítjük a beolvasási elemet
+
+
+
+
+        }
+
+        function ujElemetEloreBeszur() {
+          // beolvassuk az új tartalmat
+ 
+          // elrejtjük a beolvasási felületet
+ 
+          // létrehozzuk az új tagot
+ 
+          // létrehozzuk az új elem tartalmát
+ 
+          // létrehozzuk az új HTML elemet a tartalmával
+ 
+          // megadhatunk számára új attribútumokat is
+ 
+          // megkeressük a szülőelemet
+ 
+          // megkeressük a beszúrási helyet (gyermekelem)
+            
+          // beszúrjuk az új elemet a szülőelembe a megadott gyermekeleme elé
+            
+          // bizonyos idő múlva ismét megjelenítjük a beolvasási elemet
+            
+        }
+
+    </script>
+
+    <p>Kép tulajdonságának elérése</p>
+   
+    <img src="lampaki.gif" alt="kikapcsolt lámpa" title="kikapcsolt lámpa">
+    <p>
+        <button>Lámpa FEL!</button>
+        <button>Lámpa LE!</button>
+    </p>
+
+    <script>
+        // képfájl elérése:
+        
+        // gombok elérése (button elemek, amelyekhez a "lampa" kezdetű onclick eseménykezelő van hozzárendelve) + tömbbé alakítás:
+        
+        
+        // 
+        
+
+    </script>
+
+    <form name="form1">
+        <div>Rádiógombok: </div>
+        <div>Melyik gyümölcs a kedvence az alábbiak közül?</div>
+        <input type="radio" name="r1" value="alma" id="r1">
+            <label for="r1">alma</label><br>
+        <input type="radio" name="r1" value="körte" id="r2">
+            <label for="r2">körte</label><br>
+        <input type="radio" name="r1" value="szőlő" id="r3">
+            <label for="r3">szőlő</label><br>
+        <input type="radio" name="r1" value="eper" id="r4">
+            <label for="r4"></label>eper<br>
+    </form>
+    <button onclick="melyikRadioGomb()">Melyik gomb van jelölve?</button>
+    &nbsp; &nbsp; <span id="jelolt_radiogomb"></span>
+
+    <script>
+        function melyikRadioGomb() {
+            // megkeressük a "form1" id-jú űrlapban az input tagú elemeket
+            // eredménye HTMLCollection lesz
+            
+            // nézzük meg a változó tartalmát és típusát !
+            
+            // ide fogjuk kiírni az eredményt
+            
+
+            
+            // a tömbműveletek alkalmazásához a HTMLCollection közvetlenül nem jó
+            // mego: a HTMLCollection-t át kell alakítani tömbbé: Array.from(forras)
+            
+
+            // nézzük meg a változó tartalmát és típusát !
+
+           
+        }    
+    </script>
+
+    <p>Ez itt egy osztály nélküli szöveg.</p>
+    <div class="szov">Ez meg itt egy blokk, amely szintén osztályba ("szov") van sorolva.</div> 
+    
+    <h2>Első alcím</h2>
+    <div>Az első alcím első blokkja.</div>
+    <div>Az első alcím második blokkja.</div>
+    <p>Az első alcím első bekezdése</p>
+    <div>Az első alcím harmadik blokkja.</div>
+    <p>Az első alcím második bekezdése</p>
+
+    <form name="form2">
+        <p>Választéklista: </p>
+        <select id="legordulo">
+            <option value="válasz1">első válasz</option>
+            <option value="válasz2">második válasz</option>
+            <option value="válasz3">harmadik válasz</option>
+            <option value="válasz4">negyedik válasz</option>
+            <option value="válasz5">ötödik válasz</option>
+            <option value="válasz6">hatodik válasz</option>
+            <option value="válasz7">hetedik válasz</option>
+        </select>
+
+        <p>Újabb választék jelölőnégyzetekkel:</p>
+        <div>Melyik témakör(ök) iránt érdeklődik?</div>
+        <input type="checkbox" value="irodalom"> irodalom<br>
+        <input type="checkbox" value="matek"> matematika<br> 
+        <input type="checkbox" value="természettudományok">
+         ttk: kémia, fizika, földrajz, biológia<br> 
+        <input type="checkbox" value="sport"> sport<br> 
+        <input type="checkbox" value="informatika"> informatika<br> 
+        <input type="checkbox" value="politika"> politika<br> 
+        <input type="checkbox" value="celebek"> celebek élete 
+    </form> 
+    <button onclick="melyikJeloloNegyzetek()">Melyik témakör(öke)t választotta?</button>
+     &nbsp; &nbsp; <span id="jelolonegyzetek"></span>
+
+    <script>
+        function melyikJeloloNegyzetek() {
+            // megkeressük a "form2" id-jú űrlapban az input tagú elemek közül a checkbox tulajdonságúakat
+            
+            
+
+            // ide fogjuk kiírni az eredményt
+            
+
+        }
+
+    </script>
+    
+
+    <h2>Második alcím</h2>
+    <div>A második alcím első blokkja.</div>
+    <div>A második alcím második blokkja.</div>
+    <div>A második alcím harmadik blokkja.</div>
+    <div>A második alcím negyedik blokkja.</div>
+    <div>A második alcím ötödik blokkja.</div>
+
+    <h2>Harmadik alcím</h2>
+    <div>A harmadik alcím első blokkja.</div>
+    <div>A harmadik alcím második blokkja.</div>
+    <div>A harmadik alcím harmadik blokkja.</div>
+    <div>A harmadik alcím negyedik blokkja.</div>
+
+    
+
+</body>
+</html>

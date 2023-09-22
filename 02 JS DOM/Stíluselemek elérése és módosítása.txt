@@ -1,0 +1,53 @@
+Stíluselem kiválasztása, módosítása
+
+Elemek kiválasztása
+id alapján
+let cont = document.getElementById("cont")
+
+vagy querySelectorral
+
+let col3 = document.querySelector("#col3Id")           // #-gel kell megadni, mint a CSS-ben
+class alapján
+let col2Element = document.querySelector(".col2") /   / .-tal kell megadni, mint a CSS-ben
+
+
+A kiválasztott elemhez tartozó összes stílustulajdonság lekérdezése:
+
+let col2Style = window.getComputedStyle(col2Element)             // a col2 classhoz tartozó tulajdonságok, consolban kiíratható
+
+
+A kiválasztott elem egy meghatározott talajdonságának az lekérdezése
+
+let col2color = window.getComputedStyle(col2Element).getPropertyValue("color")        // betűszín lekérdezése
+
+vagy rövidebben az elem összes stílutujandonságából
+
+let col2Color = col2Style.getPropertyValue("color")
+
+Stílus tulajdonságának megváltoztatása
+
+melyElemhez (pont) style (pont) tulajdonság = új érték
+
+Példa:
+document.querySelector(".col1").style.color = "#FE5858"
+
+
+function changeColorMode() {
+
+    let elem1 = document.querySelector(".col1")
+    elem1.style.color = "#FE5858"
+    // vagy document.querySelector(".col1").style.color = "#FE5858"
+   
+    cont.style.backgroundColor = "#5d353e"
+    // vagy document.getElementById("cont").style.backgroundColor = "#5d353e"
+
+    col2Element.style.color = "white"
+    // vagy document.querySelector(".col2").style.color = "white"
+
+    col3.style.backgroundColor = "#B2D6CA"
+    col3.style.color = col2Color
+    // document.querySelector("#col3Id").style.backgroundColor = "#B2D6CA"
+    // document.querySelector("#col3Id").style.color = col2Color
+}
+
+A mellékelt linken találsz hozzá példát is.

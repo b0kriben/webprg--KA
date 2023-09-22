@@ -1,0 +1,17 @@
+Hozz létre egy weblapot a mellékelt kép alapján.
+Ez lehet egy órarend, napi feladatok listája, orvosi rendelő fogadóórái, konferencia menetrendje, stb.
+A weblap dizájnját te határozod meg. A mellékelt kép minta hozzá.
+
+Alap szint (4-es):
+A weblap reszponzív legyen (használj flexboxot a kártyák elrendezéséhez).
+Kezeld külön a hétközkapokat és a hétvégét.
+
+Szempontok:
+háttérkép
+container: mérete, elhelyezkedés, színe, átlátszósága
+header: a cím és a háttér elhelyezkedése
+a kártyák elrendezése képernyő átméretezése esetén
+a kártyák szövegének elrendezése
+
+Emelt szint (5-ös):
+Állíts be egy ikont, melyre kattintva dark/lighz mód állítható

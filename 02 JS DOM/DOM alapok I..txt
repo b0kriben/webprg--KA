@@ -1,0 +1,32 @@
+Téma: a weboldal elemeinek elérése és manipulálása a JavaScript kódban
+
+Elméleti tudnivalók:
+DOM = Document Object Model = az oldal szerkezetéért felelős HTML elemek JavaScript reprezentánsa
+- akkor jön létre, amikor a weboldalt betöltjük a böngészőbe
+- fahierarchiába rendezett módon a weboldal megjelenítésének alapját képezi (az elemek egymás mellett, ill. egymásba ágyazva jelennek meg) - a böngésző az oldal tényleges megjelenítését a DOM alapján végzi
+- az oldal programozási felülete, mert a DOM-on keresztül lehet a JS-ből elérni a weboldal bármely elemét
+- W3C szabvány (Core DOM, XML DOM, HTML DOM)
+- DOM = általános fastruktúrával határozza meg az oldal felépítését, elemeinek típusát, azok adattagjait és működtető metódusait
+- HTML DOM = minden egyes HTML elemnél meghatározza azokat a plusz tulajdonságokat és metódusokat, amelyek a HTML elemek teljeskörű kezeléséhez szükségesek
+
+DOM elnevezései: documentum, elem, attribútum (tulajdonság), szöveges csomópont, metódus (függvény, tevékenység)
+HTML DOM dokumentumobjektum (window.document vagy csak document) = a weboldalon található összes többi objektum tulajdonosa, azaz a teljes weboldalt képviseli
+
+HTML elemek elérése - különböző módszerei vannak
+- getElementById(id_érték) = azonosítóval (az id tulajdonság értéke alapján)
+- getElementsByName(name_érték) = a name tulajdonság értéke alapján
+- getElementsByTagName(tagnév_érték) = az elem tagja (címkéje) alapján
+- getElementsByClassName(classname_érték) = a class tulajdonság értéke alapján
+- querySelector(css_szelektor) = css_szelektor alapján az első előfordulás elérése
+- querySelectorAll(css_szelektor) = css_szelektor alapján az összes előfordulás elérése
+
+NodeList (query) vagy HTMLCollection (getElements...) - tömbszerűek, de nem tömbök! = speciális kezelést igényelnek, speciális tulajdonságokkal és metódusokkal
+attribútumok elérése:
+- innerHTML = HTML tartalom a belső címkékkel együtt
+- innerText = HTML tartalom szövegtartalma
+- textContent = HTML tartalom szövegtartalma, leszármazottakkal, szóközökkel
+- hasAttribute(tulajdonságnév) = létezik-e az elem megadott tulajdonsága
+- attribute / getAttribute(tulajdonságnév) = a megadott attribútum értékének lekérdezése
+- attribute = új_érték / setAttribute(tul,új) --> új érték beállítása
+- attributes = a megadott elem attribútumgyűjteményét adja vissza
+css stílusjegyek lekérdezése vagy beállítása: elem.style.tulajdonságnév = új_érték
