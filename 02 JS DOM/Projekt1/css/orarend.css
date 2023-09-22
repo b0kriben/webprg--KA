@@ -1,23 +1,108 @@
-#container{
-    width: 100%;
-    height: 300px;
+body{
+    background-image: url("iskola.jpg");
+    background-repeat: repeat;
+    /*background-color: yellow;*/
+    background-position: top;
+    background-size: contain;
+    background-attachment: fixed;
+} 
+
+#containerFo{
+    background-color: rgb(255, 255, 255, 0.5);
+    margin: 20px 70px;
+}
+
+#containerFelirat{
+    width: 80%;
+    height: 80px;
+    align-items: center;
     display: flex;
-    background-color: aqua;
+    background-color: rgb(255, 255, 255, 0.8);
     flex-direction: row;
+    justify-content: center;
+    margin-left: 180px;
+    margin-right: 100px;
 }
 
-.item{
-    height: 100%;
+h1{
+    font-size: 50px;
 }
 
-.green{
-    background-color: green;
+
+
+#container1{
+    width: 80%;
+    height: 800px;
+    display: flex;
+    /*background-color: rgb(255, 255, 255, 0.8);*/
+    flex-direction: column;
+}
+.itemnap1{
+    /*width: 200px;
+    height: 80px;
+    background-color: rgb(255, 255, 255, 0.5);
+    margin: 10px;*/
+}
+.hetfo{
+    background-color: rgb(255, 255, 255, 0.8);
+    width: 200px;
+    height: 100px;
+    align-items: center;
+    font-size: 80px;
+}
+.h1{
+    background-color: black;
+    color: white;
+    margin: 10px;
+}
+.kedd{
+    background-color: rgb(255, 255, 255, 0.8);
+    width: 200px;
+    height: 100px;
+    align-items: center;
+    font-size: 80px;
+}
+.szerda{
+    background-color: rgb(255, 255, 255, 0.8);
+    width: 200px;
+    height: 100px;
+    align-items: center;
+    font-size: 80px;
+}
+.csutortok{
+    background-color: rgb(255, 255, 255, 0.8);
+    width: 200px;
+    height: 100px;
+    align-items: center;
+    font-size: 80px;
+}
+.pentek{
+    background-color: rgb(255, 255, 255, 0.8);
+    width: 200px;
+    height: 100px;
+    align-items: center;
+    font-size: 80px;
 }
 
-.yellow{
-    background-color: yellow;  
-}
 
-.purple{
-    background-color: purple;   
+
+#container2{
+
+}
+.itemnap2{
+
+}
+.szombat{
+    background-color: rgb(255, 255, 255, 0.8);
+    width: 200px;
+    height: 100px;
+    align-items: center;
+    font-size: 80px;
+}
+.vasarnap{
+    background-color: rgb(255, 255, 255, 0.8);
+    width: 200px;
+    height: 100px;
+    align-items: center;
+    font-size: 80px;
 }
