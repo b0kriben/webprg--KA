@@ -1,11 +1,23 @@
 body{
     background-image: url("iskola.jpg");
     background-repeat: repeat;
-    /*background-color: yellow;*/
     background-position: top;
     background-size: contain;
     background-attachment: fixed;
 } 
+
+button{
+    border-radius: 12px;
+    background-color: black;
+    color: white;
+    padding: 15px 20px;
+    text-align: center;
+    display: inline-block;
+    font-size: 16px;
+    margin: 10px 10px;
+    position: fixed;
+    width: 150px;
+}
 
 #containerFo{
     background-color: rgb(255, 255, 255, 0.5);
@@ -20,89 +32,52 @@ body{
     background-color: rgb(255, 255, 255, 0.8);
     flex-direction: row;
     justify-content: center;
-    margin-left: 180px;
-    margin-right: 100px;
+    margin: auto;
 }
 
 h1{
     font-size: 50px;
 }
 
-
-
-#container1{
+#container{
     width: 80%;
-    height: 800px;
+    height: auto;
     display: flex;
-    /*background-color: rgb(255, 255, 255, 0.8);*/
-    flex-direction: column;
+    flex-direction: row;
+    justify-content: space-around;
+    margin: auto;
 }
-.itemnap1{
-    /*width: 200px;
-    height: 80px;
-    background-color: rgb(255, 255, 255, 0.5);
-    margin: 10px;*/
-}
-.hetfo{
-    background-color: rgb(255, 255, 255, 0.8);
-    width: 200px;
-    height: 100px;
-    align-items: center;
-    font-size: 80px;
-}
-.h1{
-    background-color: black;
-    color: white;
+
+.itemnap{
     margin: 10px;
 }
-.kedd{
-    background-color: rgb(255, 255, 255, 0.8);
-    width: 200px;
-    height: 100px;
-    align-items: center;
-    font-size: 80px;
+
+.color{
+    background-color: yellowgreen;
+    color: black;
 }
-.szerda{
-    background-color: rgb(255, 255, 255, 0.8);
-    width: 200px;
-    height: 100px;
-    align-items: center;
-    font-size: 80px;
+
+.basic{
+    background-color: black;
+    color: white;
 }
-.csutortok{
-    background-color: rgb(255, 255, 255, 0.8);
-    width: 200px;
-    height: 100px;
-    align-items: center;
-    font-size: 80px;
+
+.hetkoznap{
+    margin: 10px auto 10px auto;
+    width: 150px;
+    padding: 5px 5px 5px 5px;
+    font-weight: bolder;
 }
-.pentek{
+
+.napnev{
     background-color: rgb(255, 255, 255, 0.8);
-    width: 200px;
+    width: fit-content;
     height: 100px;
     align-items: center;
     font-size: 80px;
 }
 
-
-
-#container2{
-
-}
-.itemnap2{
-
-}
-.szombat{
-    background-color: rgb(255, 255, 255, 0.8);
-    width: 200px;
-    height: 100px;
-    align-items: center;
-    font-size: 80px;
-}
-.vasarnap{
-    background-color: rgb(255, 255, 255, 0.8);
-    width: 200px;
-    height: 100px;
-    align-items: center;
-    font-size: 80px;
+.hetvegecolor{
+    background-color: darkorchid;
+    color: white;
 }
