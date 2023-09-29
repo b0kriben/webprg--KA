@@ -8,20 +8,31 @@ body{
 
 button{
     border-radius: 12px;
-    background-color: black;
-    color: white;
+    /*background-color: black;
+    color: white;*/
     padding: 15px 20px;
     text-align: center;
-    display: inline-block;
+    display: block;
     font-size: 16px;
     margin: 10px 10px;
+    margin-bottom: 100px;
     position: fixed;
     width: 150px;
+    font-weight: bolder;
+}
+.dark{
+    background-color: black;
+    color: white;
+}
+.light{
+    background-color: white;
+    color: black;
 }
 
 #containerFo{
     background-color: rgb(255, 255, 255, 0.5);
     margin: 20px 70px;
+    padding: 10px;
 }
 
 #containerFelirat{
@@ -75,6 +86,7 @@ h1{
     height: 100px;
     align-items: center;
     font-size: 80px;
+    padding: 0px 5px;
 }
 
 .hetvegecolor{

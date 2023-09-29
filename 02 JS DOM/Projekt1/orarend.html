@@ -7,10 +7,10 @@
     <link rel="stylesheet" href="css/orarend.css">
     <title>Iskolai Órarend</title>
 </head>
-<body>
+<body id="bodyid">
 
-    <button type="button" onclick="document.getElementById=('containerFo').style.color='yellow'">Change Mode</button><br>
-    <button type="button" onclick="document.getElementById=('containerFo').style.color='black'">Change Mode Back</button>
+    <button type="button" class="dark" onclick="darkMode()">Dark Mode</button><br><br><br>
+    <button type="button" class="light" onclick="lightMode()">Light Mode</button>
     
     <div id="containerFo">
 
@@ -18,59 +18,133 @@
 
         <div id="container">
             <div class="itemnap">
-                <div class = "napnev">Hétfő</div>
+                <div id="naphatter1" class = "napnev">Hétfő</div>
                 <div class="hetkoznap color">08:00-08:45<br>Testnevelés</div>
                 <div class="hetkoznap color">09:00-09:45<br>Irodalom</div>
                 <div class="hetkoznap color">10:00-10:45<br>Történelem</div>
-                <div class="hetkoznap basic">11:00-11:45<br>Matematika</div>
-                <div class="hetkoznap basic">12:00-12:45<br>Nyelvtan</div>
+                <div id="basiccolor1" class="hetkoznap basic">11:00-11:45<br>Matematika</div>
+                <div id="basiccolor2" class="hetkoznap basic">12:00-12:45<br>Nyelvtan</div>
             </div>
             <div class="itemnap">
-                <div class = "napnev">Kedd</div>
+                <div id="naphatter2" class = "napnev">Kedd</div>
                 <div class="hetkoznap color">08:00-08:45<br>Testnevelés</div>
                 <div class="hetkoznap color">09:00-09:45<br>Történelem</div>
-                <div class="hetkoznap basic">10:00-10:45<br>Irodalom</div>
-                <div class="hetkoznap basic">11:00-11:45<br>Matematika</div>
+                <div id="basiccolor3" class="hetkoznap basic">10:00-10:45<br>Irodalom</div>
+                <div id="basiccolor4" class="hetkoznap basic">11:00-11:45<br>Matematika</div>
             </div>
             <div class="itemnap">
-                <div class = "napnev">Szerda</div>
+                <div id="naphatter3" class = "napnev">Szerda</div>
                 <div class="hetkoznap color">08:00-08:45<br>Testnevelés</div>
                 <div class="hetkoznap color">09:00-09:45<br>Irodalom</div>
                 <div class="hetkoznap color">10:00-10:45<br>Matematika</div>
-                <div class="hetkoznap basic">11:00-11:45<br>Nyelvtan</div>
-                <div class="hetkoznap basic">12:00-12:45<br>Történelem</div>
+                <div id="basiccolor5" class="hetkoznap basic">11:00-11:45<br>Nyelvtan</div>
+                <div id="basiccolor6" class="hetkoznap basic">12:00-12:45<br>Történelem</div>
             </div>
             <div class="itemnap">
-                <div class = "napnev">Csütőrtök</div>
+                <div id="naphatter4" class = "napnev">Csütőrtök</div>
                 <div class="hetkoznap color">08:00-08:45<br>Testnevelés</div>
                 <div class="hetkoznap color">09:00-09:45<br>Történelem</div>
-                <div class="hetkoznap basic">10:00-10:45<br>Matematika</div>
-                <div class="hetkoznap basic">11:00-11:45<br>Irodalom</div>
+                <div id="basiccolor7" class="hetkoznap basic">10:00-10:45<br>Matematika</div>
+                <div id="basiccolor8" class="hetkoznap basic">11:00-11:45<br>Irodalom</div>
             </div>
             <div class="itemnap">
-                <div class = "napnev">Péntek</div>
+                <div id="naphatter5" class = "napnev">Péntek</div>
                 <div class="hetkoznap color">08:00-08:45<br>Testnevelés</div>
                 <div class="hetkoznap color">09:00-09:45<br>Matematika</div>
-                <div class="hetkoznap basic">10:00-10:45<br>Irodalom</div>
-                <div class="hetkoznap basic">11:00-11:45<br>Történelem</div>
+                <div id="basiccolor9" class="hetkoznap basic">10:00-10:45<br>Irodalom</div>
+                <div id="basiccolor10" class="hetkoznap basic">11:00-11:45<br>Történelem</div>
             </div>
         </div>
 
         <div id="container">
             <div class="itemnap">
-                <div class = "napnev">Szombat</div>
+                <div id="naphatter6" class = "napnev">Szombat</div>
                 <div class="hetkoznap color">10:00-12:00<br>Biciklizés</div>
                 <div class="hetkoznap hetvegecolor">14:00-16:30<br>Tanulás</div>
-                <div class="hetkoznap basic">17:00-17:30<br>Takarítás</div>
+                <div id="basiccolor11" class="hetkoznap basic">17:00-17:30<br>Takarítás</div>
             </div>
             <div class="itemnap2">
-                <div class = "napnev">Vasárnap</div>
+                <div id="naphatter7" class = "napnev">Vasárnap</div>
                 <div class="hetkoznap color">10:00-12:00<br>Biciklizés</div>
                 <div class="hetkoznap hetvegecolor">14:00-16:30<br>Tanulás</div>
             </div>
         </div>
 
     </div>
+
+    <script>
+
+        function darkMode(){
+            document.getElementById('bodyid').style.color='yellow';
+            document.getElementById('containerFo').style.backgroundColor='rgb(0, 0, 0, 0.4)';
+            document.getElementById('containerFelirat').style.backgroundColor='rgb(0, 0, 0, 0.5)';
+            document.getElementById('naphatter1').style.backgroundColor='rgb(0, 0, 0, 0.5)';
+            document.getElementById('naphatter2').style.backgroundColor='rgb(0, 0, 0, 0.5)';
+            document.getElementById('naphatter3').style.backgroundColor='rgb(0, 0, 0, 0.5)';
+            document.getElementById('naphatter4').style.backgroundColor='rgb(0, 0, 0, 0.5)';
+            document.getElementById('naphatter5').style.backgroundColor='rgb(0, 0, 0, 0.5)';
+            document.getElementById('naphatter6').style.backgroundColor='rgb(0, 0, 0, 0.5)';
+            document.getElementById('naphatter7').style.backgroundColor='rgb(0, 0, 0, 0.5)';
+            document.getElementById('basiccolor1').style.backgroundColor='white';
+            document.getElementById('basiccolor1').style.color='black';
+            document.getElementById('basiccolor2').style.backgroundColor='white';
+            document.getElementById('basiccolor2').style.color='black';
+            document.getElementById('basiccolor3').style.backgroundColor='white';
+            document.getElementById('basiccolor3').style.color='black';
+            document.getElementById('basiccolor4').style.backgroundColor='white';
+            document.getElementById('basiccolor4').style.color='black';
+            document.getElementById('basiccolor5').style.backgroundColor='white';
+            document.getElementById('basiccolor5').style.color='black';
+            document.getElementById('basiccolor6').style.backgroundColor='white';
+            document.getElementById('basiccolor6').style.color='black';
+            document.getElementById('basiccolor7').style.backgroundColor='white';
+            document.getElementById('basiccolor7').style.color='black';
+            document.getElementById('basiccolor8').style.backgroundColor='white';
+            document.getElementById('basiccolor8').style.color='black';
+            document.getElementById('basiccolor9').style.backgroundColor='white';
+            document.getElementById('basiccolor9').style.color='black';
+            document.getElementById('basiccolor10').style.backgroundColor='white';
+            document.getElementById('basiccolor10').style.color='black';
+            document.getElementById('basiccolor11').style.backgroundColor='white';
+            document.getElementById('basiccolor11').style.color='black';
+        }
+
+        function lightMode(){
+            document.getElementById('bodyid').style.color='black';
+            document.getElementById('containerFo').style.backgroundColor='rgb(255, 255, 255, 0.5)';
+            document.getElementById('containerFelirat').style.backgroundColor='rgb(255, 255, 255, 0.8)';
+            document.getElementById('naphatter1').style.backgroundColor='rgb(255, 255, 255, 0.8)';
+            document.getElementById('naphatter2').style.backgroundColor='rgb(255, 255, 255, 0.8)';
+            document.getElementById('naphatter3').style.backgroundColor='rgb(255, 255, 255, 0.8)';
+            document.getElementById('naphatter4').style.backgroundColor='rgb(255, 255, 255, 0.8)';
+            document.getElementById('naphatter5').style.backgroundColor='rgb(255, 255, 255, 0.8)';
+            document.getElementById('naphatter6').style.backgroundColor='rgb(255, 255, 255, 0.8)';
+            document.getElementById('naphatter7').style.backgroundColor='rgb(255, 255, 255, 0.8)';
+            document.getElementById('basiccolor1').style.backgroundColor='black';
+            document.getElementById('basiccolor1').style.color='white';
+            document.getElementById('basiccolor2').style.backgroundColor='black';
+            document.getElementById('basiccolor2').style.color='white';
+            document.getElementById('basiccolor3').style.backgroundColor='black';
+            document.getElementById('basiccolor3').style.color='white';
+            document.getElementById('basiccolor4').style.backgroundColor='black';
+            document.getElementById('basiccolor4').style.color='white';
+            document.getElementById('basiccolor5').style.backgroundColor='black';
+            document.getElementById('basiccolor5').style.color='white';
+            document.getElementById('basiccolor6').style.backgroundColor='black';
+            document.getElementById('basiccolor6').style.color='white';
+            document.getElementById('basiccolor7').style.backgroundColor='black';
+            document.getElementById('basiccolor7').style.color='white';
+            document.getElementById('basiccolor8').style.backgroundColor='black';
+            document.getElementById('basiccolor8').style.color='white';
+            document.getElementById('basiccolor9').style.backgroundColor='black';
+            document.getElementById('basiccolor9').style.color='white';
+            document.getElementById('basiccolor10').style.backgroundColor='black';
+            document.getElementById('basiccolor10').style.color='white';
+            document.getElementById('basiccolor11').style.backgroundColor='black';
+            document.getElementById('basiccolor11').style.color='white';
+        }
+
+    </script>
 
 </body>
 </html>
