@@ -31,10 +31,11 @@ button{
     background-color: rgb(255, 255, 255, 0.5);
     margin: 20px 70px;
     padding: 10px;
+    border-radius: 100px;
 }
 
 #containerFelirat{
-    width: 80%;
+    width: 85%;
     height: 80px;
     align-items: center;
     display: flex;
@@ -42,6 +43,8 @@ button{
     flex-direction: row;
     justify-content: center;
     margin: auto;
+    margin-bottom: 10px;
+    border-radius: 25px;
 }
 
 h1{
@@ -55,26 +58,30 @@ h1{
     flex-direction: row;
     justify-content: space-around;
     margin: auto;
+    margin-bottom: 10px;
 }
 
 .itemnap{
     margin: 10px;
+    border-radius: 15px;
 }
 
 .color{
-    background-color: yellowgreen;
+    background-color: rgb(161, 241, 0);
     color: black;
+    border-radius: 10px;
 }
 
 .basic{
     background-color: black;
     color: white;
+    border-radius: 10px;
 }
 
 .hetkoznap{
     margin: 10px auto 10px auto;
     width: 150px;
-    padding: 5px 5px 5px 5px;
+    padding: 5px 10px 5px 10px;
     font-weight: bolder;
 }
 
@@ -85,9 +92,11 @@ h1{
     align-items: center;
     font-size: 80px;
     padding: 0px 5px;
+    border-radius: 5px;
 }
 
 .hetvegecolor{
     background-color: darkorchid;
     color: white;
+    border-radius: 10px;
 }
