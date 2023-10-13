@@ -1,0 +1,136 @@
+Tömbök létrehozása
+
+
+Felsorolással:
+
+let nyelvek = ["HTML", "CSS", "JS"];
+
+vagy
+
+let nyelvek = [
+ 
+"HTML", 
+  "CSS", 
+  "JS"
+
+];
+
+vagy 
+
+let nyelvek = []; 
+
+nyelvek [0] = "HTML"; 
+nyelvek [1] = "CSS"; 
+nyelvek [2] = "JS";
+
+new kulcsszóval:
+
+let nyelvek = new Array("HTML", "CSS", "JS");                    // ezt nem szokták általában használni
+
+
+A tömb elemeinek elérése
+
+A tömb elemeire az indexek alapján tudunk hivatkozni.
+
+TÖMB[index]
+
+Így tudjuk a tömb elemének értékét változtatni vagy elérni.
+
+let elem1 = nyelvek[0];
+
+nyelvek[2] = "TypeSctipt";
+
+Elem hozzáadása tömbhöz - push(), unshift()
+
+Új elemet a puch() metódussal tudunk hozzáadni a tömb végéhez:
+
+let nyelvek = ["HTML", "CSS", "JS"];
+nyelvek.push("PHP);                                    ---->  ["HTML", "CSS", "JS", "PHP"]
+
+Új elemet a unshift() metódussal tudunk hozzáadni a tömb elejéhez:
+
+let nyelvek = ["HTML", "CSS", "JS"];
+nyelvek.unshift("PHP);                                    ---->  ["PHP, ""HTML", "CSS", "JS"]
+
+
+Tömb hossza - length
+
+A tömb után ponttal a length-et írva a tömb hosszát adja vissza.
+
+let hossz = nyelvek.length;
+
+Tömb elemének törlése - pop(), shift()
+
+let nyelvek = ["HTML", "CSS", "JS"];
+nyelvek.pop();                                    ---->  [""HTML", "CSS"]
+
+A tömb utolsó elemét távolítja el és egyben meg is tudjuk vele kapni az elemet.
+
+let nyelv3 = nyelvek.pop();                                    ---->  nyelv3 = "JS"
+
+A tömb első elemét távolítja el és egyben meg is tudjuk vele kapni az elemet.
+
+let nyelvek = ["HTML", "CSS", "JS"];
+nyelvek.shift();                                    ---->  ["CSS", "JS"]
+
+let nyelvek = ["HTML", "CSS", "JS"];
+let nyelv1 = nyelvek.shift();                ---->  nyelv1 = "HTML"
+
+Tömbök összefűzése - concat()
+
+Két tömböt egyesíteni tudjuk és egy új tömböz hozunk vele létre. Az eredeti tömböket nem módosítja.
+
+let nyelvek = ["HTML", "CSS", "JS"];
+let szamok = ["egy", "ketto", "harom"];
+let osszevont = nyelvek.concat(szamok);                ---->  ["HTML", "CSS", "JS", "egy", "ketto", "harom"]
+
+Beszúrás, cser, törlés - splice()
+
+A splice() lehetővé teszi elem(ek) beszútását, törlését, csréjét egy tömbben, attól függően, hogy hány paramétert tartalmat.
+A szintaxisa:
+array.splice(index, darab, új elemek)
+
+index - amely indextől szeretnénk a módosítást
+darab - hány darab elemet szeretnénk módosítani
+új elemek - ezek opcionálisak, melyeket be szerenénk illesztenia tömbbe
+
+Példák:
+let nyelvek = ["HTML", "CSS", "JS"];
+nyelvek.splice(1, 0, "egy", "ketto")            ----> ['HTML', 'egy', 'ketto', 'CSS', 'JS']
+
+1. indextől, 0 elem módosult és beilesztettük az egy kettőt.
+
+let nyelvek = ["HTML", "CSS", "JS"];
+nyelvek.splice(1, 2, "egy", "ketto")            ----> ['HTML', 'egy', 'ketto']
+
+1. indextől, 2 elem módosult és beilesztettük az egy kettőt.
+
+let nyelvek = ["HTML", "CSS", "JS"];
+nyelvek.splice(1, 1, "egy")                         ----> ['HTML', 'egy', 'JS']
+
+1. indextől, 1 elem cserélődött, mert egy be is lett szútva, azaz a css ki lett cserélve egy-re
+
+let nyelvek = ["HTML", "CSS", "JS"];
+nyelvek.splice(1, 1 )                         ----> ['HTML', 'JS']
+1. indextől egy elem módosult, nincs beszúrva semmi, azaz egy elem törlődött
+
+
+Tömb szelet - slice()
+
+A slice() nem módosítja az eredeti tömböt. Segítségével az eredeti egy részét, szeletét tudjuk megkapni.
+
+Szintaxis:
+array.slice(mettől, meddig)
+
+mettől - kezdő index (beleértve), kötelező megadni
+meddig - végződő index (nincs már benne), ez a paraméter opcionális
+
+Példák:
+let nyelvek = ["HTML", "CSS", "JS", "Java", "Python", "PHP"];
+let list = nyelvek.slice(1, 4)
+console.log(list)                                         -----> ['CSS', 'JS', 'Java']
+
+
+let nyelvek = ["HTML", "CSS", "JS", "Java", "Python", "PHP"];
+let list = nyelvek.slice(2)
+console.log(list)                                         -----> ['JS', 'Java', 'Python', 'PHP']

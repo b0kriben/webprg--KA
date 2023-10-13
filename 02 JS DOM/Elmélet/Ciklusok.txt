@@ -1,0 +1,15 @@
+A JavaScript ciklusok:
+
+for (let i = 0; i < 10; i++) { utasítások }
+
+for (let key in object) { utasítások }
+
+for (let value of iterable) { utasítások }
+
+array.forEach(function (value, index) { utasítások })
+
+array.forEach(function (value) { utasítások })
+
+while (feltétel igaz)  utasítások {}
+
+do { utasítások } while (feltétel igaz)
