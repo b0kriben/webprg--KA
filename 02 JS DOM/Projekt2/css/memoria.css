@@ -1,0 +1,22 @@
+body{
+    @media screen and(max-width: 200px, 700px, 1200px);
+}
+
+img{
+    width: 150px;
+    margin: 10px;
+}
+
+#container{
+    width: 80%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin: auto;
+    margin-bottom: 10px;
+}
+
+.kartya{
+    flex: 1;
+}
