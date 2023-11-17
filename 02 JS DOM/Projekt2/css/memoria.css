@@ -1,5 +1,6 @@
 body{
     @media screen and(max-width: 200px, 700px, 1200px);
+    background-color: rgb(162, 255, 255);
 }
 
 img{
