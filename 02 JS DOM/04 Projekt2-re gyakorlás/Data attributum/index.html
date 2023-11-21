@@ -7,12 +7,57 @@
     <title>2 × 2</title>
 </head>
 <body>
+
     <div class="container">
         <div class="item"></div>
         <div class="item"></div>
         <div class="item"></div>
         <div class="item"></div>
     </div>
+    
+    A HTML tagekben adatokat tudunk elhelyezni a data attributummal.
+    Az adatot key value pár alapján tároljuk és tudjuk elérni.
+    data-key="value"
+    let dataValue = element.dataset.key
+    Példa:
+    <div id="item" onclick="changeColor(this)" data-index-number="1"> </div>
+    let index = document.getElementById("item").dataset.indexNumber
+
+    data- (data kötőjel) utáni résszel lehet. Egy vagy több szóból állhat, kötőjellel elválasztva.
+    Pl:
+    data-sorszam
+    data-index-number
+    elérés:
+    data- (data kötőjel) utáni tész. Ha több szóból áll, akkor camelCase módon hivatkuzhatunk rá
+    PL.:
+    dataset.sorszam
+    dataset.indexNumber
+
+
+
+    Data attribútumok összefoglalója példákkal:
+    <div id="user" data-user-id="123" data-username="john_doe">Felhasználó információ</div>
+    var userDiv = document.getElementById('user');
+
+    var userId = userDiv.dataset.userId;
+    console.log(userId); // Kiírja: 123
+
+    var username = userDiv.dataset.username;
+    console.log(username); // Kiírja: john_doe
+    var userDiv = document.getElementById('user');
+
+    var userId = userDiv.getAttribute('data-user-id');
+    console.log(userId); // Kiírja: 123
+
+    // data-username attribútum értékének lekérése a getAttribute() segítségével
+    var username = userDiv.getAttribute('data-username');
+    console.log(username); // Kiírja: john_doe
+
+
+    Értékek beállítása JavaScript segítségével:
+    var userDiv = document.getElementById('user');
+    userDiv.dataset.newAttribute = 'new value';
+    userDiv.setAttribute('data-another-attribute', 'another value');
     
 </body>
 <script src="js/2x2.js"></script>
