@@ -1,9 +1,10 @@
 .container{
-    width: 300px;
-    height: 300px;
+    width: 250px;
+    height: 250px;
     background-color: lightblue;
     display: flex;
     flex-wrap: wrap;
+    padding: 10px;
 }
 
 .item{
@@ -11,5 +12,4 @@
     height: 100px;
     margin: 10px;
     background-color: yellow;
-    /*flex: 50%;*/
 }
