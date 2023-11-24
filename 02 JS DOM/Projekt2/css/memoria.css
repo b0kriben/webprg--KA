@@ -3,11 +3,11 @@ body{
     background-color: rgb(162, 255, 255);
 }
 
-/*<div class="kartya" id="12" onclick="click()"><img src="kartya_hatlap.png" alt="kartya_hatlap"></div>*/
-img{
+/*<div class="kartya" id="tizenketto" onclick="click()"><img src="kartya_hatlap.png" alt="kartya_hatlap"></div>*/
+/*img{
     width: 150px;
     margin: 10px;
-}
+}*/
 
 #container{
     width: 80%;
@@ -21,6 +21,9 @@ img{
 }
 
 .kartya{
+    width: 70px;
+    height: 200px;
+    margin: 10px;
     flex: 25%;
     background-color: red;
     color: red;
