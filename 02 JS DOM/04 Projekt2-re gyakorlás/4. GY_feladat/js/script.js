@@ -1,3 +1,21 @@
+let heroes = [
+    {firstName: "Ahsoka", lastName: "Tano", job: "padawan"},
+    {firstName: "Boba", lastName: "Fett", job: "fejvadász"},
+    {firstName: "Han", lastName: "Solo", job: "csempész"},
+    {firstName: "Leia", lastName: "Organa", job: "szenátor"} 
+]
+
+const templateLiteral = 
+'<p>${heroes[0]}</p>'
+
+
+document.body.innerHTML = templateLiteral;
+
+
+
+
+
+
 /*let heroes = [
 {firstName: "Ahsoka", lastName: "Tano", job: "padawan"},
 {firstName: "Boba", lastName: "Fett", job: "fejvadász"},
