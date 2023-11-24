@@ -14,8 +14,10 @@ const fizetes = {
   fname4:"Gerald", penz4:2920
 }
 
-document.getElementById("kereset").innerHTML = fizetes.fname1+" : "+fizetes.penz1+"<br>"+ fizetes.fname2+" : "+fizetes.penz2+"<br>"+ fizetes.fname3+" : "+fizetes.penz3+"<br>"+ fizetes.fname4+" : "+fizetes.penz4;
+let osszeg = penz1+penz2+penz3+penz4;
 
+document.getElementById("kereset").innerHTML = fizetes.fname1+" : "+fizetes.penz1+"<br>"+ fizetes.fname2+" : "+fizetes.penz2+"<br>"+ fizetes.fname3+" : "+fizetes.penz3+"<br>"+ fizetes.fname4+" : "+fizetes.penz4;
+document.getElementById("osszkereset").innerHTML = osszeg;
 
 
 
