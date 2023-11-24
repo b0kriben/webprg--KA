@@ -1,6 +1,6 @@
 let firstName = "John";
 const user = {firstName:"John"};
-document.getElementById('name').innerHTML = user.firstName;
+//document.getElementById('name').innerHTML = user.firstName;
 
 function isEmpty()
 {
