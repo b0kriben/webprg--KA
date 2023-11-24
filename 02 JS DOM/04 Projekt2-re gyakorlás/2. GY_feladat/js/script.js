@@ -4,7 +4,7 @@ const user = {firstName:"John"};
 
 function isEmpty()
 {
-    if(document.getElementById("name").innerHTML = null)
+    if(user = null)
     {
         console.log(isEmpty({})) = true;
     }
