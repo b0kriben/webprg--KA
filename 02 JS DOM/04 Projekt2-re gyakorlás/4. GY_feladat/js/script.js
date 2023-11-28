@@ -1,20 +1,30 @@
 let heroes = [
-    {firstName: "Ahsoka", lastName: "Tano", job: "padawan"},
-    {firstName: "Boba", lastName: "Fett", job: "fejvadász"},
-    {firstName: "Han", lastName: "Solo", job: "csempész"},
-    {firstName: "Leia", lastName: "Organa", job: "szenátor"} 
-]
+    {firstName: "Ahsoka", lastName: "Tano", job: "padawan", kep:'<img id="image" src="ahsoka_tano.jpeg">'},
+    {firstName: "Boba", lastName: "Fett", job: "fejvadász", kep:'<img id="image" src="boba_fett.jpg">'},
+    {firstName: "Han", lastName: "Solo", job: "csempész", kep:'<img id="image" src="han_solo.jpg">'},
+    {firstName: "Leia", lastName: "Organa", job: "szenátor", kep:'<img id="image" src="leia_organa.jpg">'} ]
 
-const templateLiteral = 
-'<p>${heroes[0]}</p>'
+function kiiras(parameter) {
+    let ki = "";
 
+    ki +=`<div id="container">`
 
-document.body.innerHTML = templateLiteral;
+    for (let i = 0; i < parameter.length; i++) {
+        
+        ki +=`<div id="card">`;
+        for (let j = 0; j < Object.values(parameter[i]).length; j++) {
+            ki +=`<div> ${Object.values(parameter[i])[j]} </div>`;      
+        }
+        ki +=`</div>`;
+    }
 
+    ki +=`</div>`
+    document.getElementById("container").innerHTML = ki;
+}
 
-
-
-
+heroes.push({firstName: "Darth",lastName:"Vader",job:"sithnagyúr", kep:'<img id="image" src="darth_vader.jpg">'});
+heroes.push({firstName: "Luke",lastName:"Skywalker",job:"jedilovag", kep:'<img id="image" src="luke_skywalker.jpg">'});
+kiiras(heroes)
 
 /*let heroes = [
 {firstName: "Ahsoka", lastName: "Tano", job: "padawan"},

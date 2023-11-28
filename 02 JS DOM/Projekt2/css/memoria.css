@@ -1,7 +1,36 @@
-body{
+#container{
+    background-color: lightblue;
+    width: min-content;
+    height: min-content;
+    display: grid;
+    grid-template: 
+                "a b c d"
+                "e f g h"
+                "i j k l";
+    align-content: space-around;
+    justify-content: space-around;
+    }
+    
+#item{
+    width: 150px;
+    height: 150px;
+    margin: 10px;
+    background-color:red;
+    color: red;
+    font-size: 100px;
+    padding-top: 10px;
+    margin-bottom: 10px;
+    text-align: center;
+    font-weight: bolder;
+}
+
+
+
+
+/*body{
     @media screen and(max-width: 200px, 700px, 1200px);
     background-color: rgb(162, 255, 255);
-}
+}*/
 
 /*<div class="kartya" id="tizenketto" onclick="click()"><img src="kartya_hatlap.png" alt="kartya_hatlap"></div>*/
 /*img{
@@ -9,7 +38,7 @@ body{
     margin: 10px;
 }*/
 
-#container{
+/*#container{
     width: 80%;
     height: auto;
     display: flex;
@@ -27,4 +56,4 @@ body{
     flex: 25%;
     background-color: red;
     color: red;
-}
+}*/

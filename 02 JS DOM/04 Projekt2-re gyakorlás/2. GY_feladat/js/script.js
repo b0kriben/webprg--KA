@@ -1,19 +1,11 @@
-let firstName = "John";
-const user = {firstName:"John"};
-//document.getElementById('name').innerHTML = user.firstName;
-
-function isEmpty()
-{
-    if(user = null)
-    {
-        console.log(isEmpty({})) = true;
+function isEmpty(paramete) {
+    if (Object.keys(paramete).length == 0) {
+        return true;
     }
-    else
-    {
-        console.log(isEmpty({name: "John" })) = false;
-    }
+    return false;
 }
-
+console.log(isEmpty({}));
+console.log(isEmpty({name: "John" }));
 
 /*Hozz létre egy
 

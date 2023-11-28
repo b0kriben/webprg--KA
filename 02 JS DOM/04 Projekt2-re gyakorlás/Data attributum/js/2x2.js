@@ -1,9 +1,10 @@
-let dataValue = element.dataset.key
+let colors = ["red", "blue", "Yellow"]
 
-let index = document.getElementById("item").dataset.indexNumber
-
-function changeColor(this)
-{
-    document.getElementById("item").style.backgroundColor='red';
-    document.getElementById("item").style.backgroundColor='blue';
+function changeColor(object) {
+   
+   object.style.backgroundColor = colors[object.dataset.color];
+   object.dataset.color = parseInt(object.dataset.color)+1;
+    if (object.dataset.color =="3") {
+        object.dataset.color ="0";
+    }
 }

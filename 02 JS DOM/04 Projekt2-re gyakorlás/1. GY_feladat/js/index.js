@@ -1,11 +1,14 @@
+
 let firstName = "John";
 let lastName = "Smith";
 const user = {firstName:"John", lastName:"Smith"};
 
+user.firstName = "Paul";
+delete user.firstName;
 /*let user = [firstName, lastName];*/
 
 //const user = {firstName:"John", lastName:"Smith"};
-document.getElementById('name').innerHTML = user.firstName + " "  +user.lastName//user[firstName] + user[lastName];
+document.getElementById('name').innerHTML = user.firstName + " "  + user.lastName//user[firstName] + user[lastName];
 
 /*function userName()
 {

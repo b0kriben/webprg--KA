@@ -1,15 +1,18 @@
-.container{
-    width: 250px;
-    height: 250px;
+#container{
     background-color: lightblue;
-    display: flex;
-    flex-wrap: wrap;
-    padding: 10px;
-}
-
-.item{
-    width: 100px;
-    height: 100px;
+    width: min-content;
+    height: min-content;
+    display: grid;
+    grid-template: 
+                "a b"
+                "c d";
+    align-content: space-around;
+    justify-content: space-around;
+    }
+    
+#item{
+    width: 150px;
+    height: 150px;
     margin: 10px;
-    background-color: yellow;
+    background-color:yellow;
 }
