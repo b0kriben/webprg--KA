@@ -1,4 +1,22 @@
-//let colors = ["greenYellow", "red"]
+var tomb = document.querySelectorAll("#item");
+console.log(tomb);
+var db = 0;
+
+for(elem of tomb)
+{
+    elem.innerHTML = Math.floor(Math.random() * 6) + 1; 
+    if(elem == elem)
+    {
+        ++db;
+
+        if(db > 2)
+        {
+            elem.innerHTML = Math.floor(Math.random() * 6) + 1; 
+        }
+    }
+}
+
+let colors = ["greenYellow", "red"]
 
 function changeColor(object) {
    
@@ -7,6 +25,17 @@ function changeColor(object) {
     if (object.dataset.color =="2") {
         object.dataset.color ="0";
     }
+
+    /*if(object.dataset.color == "greenYellow" && "#item" == "#item")
+    {
+        object.hide("#item");
+    }*/
 }
 
-document.getElementById("item").innerHTML = Math.floor(Math.random() * 6) + 1;
+function cardPar()
+{
+    if(object.dataset.color == "greenYellow" && "#item" == "#item")
+    {
+        object.hide("#item"); //display.none
+    }
+}
