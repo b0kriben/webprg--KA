@@ -1,4 +1,6 @@
-let colors = ["greenYellow", "red"]
+//let colors = ["greenYellow", "red"]
+
+document.getElementById("item").innerHTML = Math.floor(Math.random() * 6);
 
 function changeColor(object) {
    
@@ -7,4 +9,6 @@ function changeColor(object) {
     if (object.dataset.color =="2") {
         object.dataset.color ="0";
     }
+
+
 }

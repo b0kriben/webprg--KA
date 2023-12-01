@@ -1,4 +1,10 @@
-#container{
+@media screen and(max-width: 800px){
+    /*body{
+        background-color: rgb(162, 255, 255);
+    }*/
+}
+
+/*#container{
     background-color: lightblue;
     width: min-content;
     height: min-content;
@@ -9,28 +15,39 @@
                 "i j k l";
     align-content: space-around;
     justify-content: space-around;
-    }
+}*/
+
+#container{
+    width: 80%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: auto;
+    margin-bottom: 10px;
+}
     
 #item{
-    width: 150px;
-    height: 150px;
-    margin: 10px;
-    background-color:red;
+    width: 250px;
+    height: 250px;
+    margin: 20px;
+    /*background-color:red;*/
+    background-color: greenyellow;
     color: red;
     font-size: 100px;
     padding-top: 10px;
     margin-bottom: 10px;
     text-align: center;
     font-weight: bolder;
+    flex: 20%;
 }
 
 
 
 
-/*body{
-    @media screen and(max-width: 200px, 700px, 1200px);
-    background-color: rgb(162, 255, 255);
-}*/
+
+
 
 /*<div class="kartya" id="tizenketto" onclick="click()"><img src="kartya_hatlap.png" alt="kartya_hatlap"></div>*/
 /*img{
@@ -38,7 +55,8 @@
     margin: 10px;
 }*/
 
-/*#container{
+/*
+#container{
     width: 80%;
     height: auto;
     display: flex;
