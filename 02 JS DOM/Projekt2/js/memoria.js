@@ -36,6 +36,8 @@ function cardPar()
 {
     if(object.dataset.color == "greenYellow" && "#item" == "#item")
     {
-        object.hide("#item"); //display.none
+        document.getElementById('#item').style.color='white';
+        document.getElementById('#item').style.backgroundColor='white';
+        //object.hide("#item"); //display.none
     }
 }
