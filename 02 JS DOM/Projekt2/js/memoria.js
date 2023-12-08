@@ -41,3 +41,5 @@ function cardPar()
         //object.hide("#item"); //display.none
     }
 }
+
+/*const myTimeout = setTimeout(memoriaContainer, 2000);*/
