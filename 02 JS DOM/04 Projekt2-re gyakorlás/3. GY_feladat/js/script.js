@@ -7,15 +7,15 @@ let fizetes = {
 
 let ki = "";
 
-function osszeg(paramete) 
+function osszeg(parameter) 
 {
   let osszead = 0
 
-  for (let i = 0; i < Object.keys(paramete).length; i++) 
+  for (let i = 0; i < Object.keys(parameter).length; i++) 
   {
-    osszead += Object.values(paramete)[i];
-    ki += (Object.keys(paramete)[i] + ": ");
-    ki += (Object.values(paramete)[i]);
+    osszead += Object.values(parameter)[i];
+    ki += (Object.keys(parameter)[i] + ": ");
+    ki += (Object.values(parameter)[i]);
     ki += "<br>";
   }
 

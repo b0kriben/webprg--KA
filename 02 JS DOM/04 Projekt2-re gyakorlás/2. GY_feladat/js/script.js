@@ -1,5 +1,5 @@
-function isEmpty(paramete) {
-    if (Object.keys(paramete).length == 0) {
+function isEmpty(parameter) {
+    if (Object.keys(parameter).length == 0) {
         return true;
     }
     return false;

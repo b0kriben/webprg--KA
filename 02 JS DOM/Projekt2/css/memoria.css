@@ -1,20 +1,28 @@
 @media screen and(max-width: 600px){}
 
-body{
-    /*background-image: url("poker_table.jpg");
+html{
+    background-color: rgb(0, 126, 0);
+    box-shadow: 0px 450px 300px 0px rgb(0, 59, 0) inset;
+}
+
+/*body{
+    background-image: url("poker_table.jpg");
     background-repeat: repeat;
     background-position: top;
     background-size: contain;
-    background-attachment: fixed;*/
-    background-color: rgb(0, 59, 0);
-}
+    background-attachment: fixed;
+}*/
 
 h1{
     text-align: center;
-    font-size: 100px;
+    font-size: 150px;
+    margin: 20px 0px 20px 0px;
     font-weight: bolder;
-    color: aqua;
     font-family: 'Courier New', Courier, monospace;
+    color: rgb(4, 0, 255);
+    text-align: center;
+    text-shadow: 0 0 10px #fff, 0 0 30px #fff, 0 0 30px #fff, 0 0 40px #ff00de, 0 0 70px #ff00de, 0 0 80px #ff00de,
+    0 0 100px #ff00de, 0 0 150px #ff00de;
 }
 
 /*#container{
