@@ -34,10 +34,10 @@ function changeColor(object) {
 
 function cardPar()
 {
-    if(object.dataset.color == "greenYellow" && "#item" == "#item")
+    if(object.dataset.color == "greenYellow" && elem == elem)
     {
-        document.getElementById('#item').style.color='white';
-        document.getElementById('#item').style.backgroundColor='white';
+        document.getElementById('#item').style.color='rgb(0, 59, 0)';
+        document.getElementById('#item').style.backgroundColor='rgb(0, 59, 0)';
         //object.hide("#item"); //display.none
     }
 }
