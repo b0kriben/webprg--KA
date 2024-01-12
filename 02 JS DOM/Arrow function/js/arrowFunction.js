@@ -2,16 +2,20 @@ var input = [];
 
 function megFordit(){
 
-    /*let ki = "";
+    input.push(document.getElementById("input").value);
+
+    //csere
     for(let i in input)
     {
-        ki +=input[i];
+        let uj = input[0];
+        input[0] = input[i];
+        input[i] = uj;
     }
-    document.getElementById("kimenet").innerHTML = ki;*/
 
-    
+    /*let uj = input[0];
+    input[0] = input[5];
+    input[5] = uj;*/
 
-    input.push(document.getElementById("input").value);
     document.getElementById("kimenet").innerHTML = input[0];
 }
 
