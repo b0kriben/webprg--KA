@@ -5,7 +5,7 @@ console.log(brand);
 console.log(model);
 console.log(year);
 console.log(color);
-//1. kérdés: Ugyanolyan változóneveket kell használni.
+//1. kérdés: Ugy azokat a  változóneveket kell használni.
 //2. kérdés: Fontos a változók sorrendje.
 
 
@@ -38,5 +38,5 @@ function printStudentInfo({name, age, grade, subject}){
     subjects: ['Math', 'English', 'History']
     };
     printStudentInfo(student);
-//1. kérdés: Ugyanolyan változóneveket kell használni.
+//1. kérdés: Ugy azokat a változóneveket kell használni.
 //2. kérdés: Nem fontos a változók sorrendje.
