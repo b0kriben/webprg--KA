@@ -1,8 +1,18 @@
-function possiblyPerfect(key,answers) {
-    let key = ["F", "T", "T", "F", "F"];
-    let answer = ["F", "_", "T", "F", "T"];
-    if (answer == true){
-      console.log(answer);
+const possiblyPerfect = (key, answers) => {
+  let result = null
+
+  for (let i = 0; i < key.length; i++) {
+    if (key[i] !== '_') {
+      const match = key[i] === answers[i]
+
+      if (result === null) {
+        result = match
+        continue
+      }
+
+      if (result !== match) return false
     }
-    return true || false ;
   }
+
+  return true
+}
