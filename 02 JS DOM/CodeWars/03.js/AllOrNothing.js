@@ -14,5 +14,5 @@ const possiblyPerfect = (key, answers) => {
     }
   }
 
-  return true
+  return true;
 }
