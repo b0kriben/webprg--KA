@@ -1,5 +1,5 @@
 const osszead = (sz1, sz2) => sz1 + sz2;
-const kivon = (sz1, sz2) => sz1 - sz2;
+const kivonas = (sz1, sz2) => sz1 - sz2;
 const szorzas = (sz1, sz2) => sz1 * sz2;
 const osztas = (sz1, sz2) => sz1 / sz2;
 
