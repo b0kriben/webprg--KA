@@ -1,5 +1,4 @@
 //CALLBACK
-
 function fuggveny(parameter, csinal)
 {
     let tomb = parameter.Split();
