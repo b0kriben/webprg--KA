@@ -13,11 +13,18 @@ fetch('https://jsonplaceholder.org/users/?id=1 ')
     console.error('There was a problem with the fetch operation:', error);
   });
 
-function usersForm() {
-    let tomb = document.forms["userForm"].value;
+function userForm() {
+  let tomb = document.getElementById("buttonId").value;
+
+  for(let i=0; i<=30; i++)
+  {
+    tomb.push(i);
+  }
+  return tomb;
+    /*let tomb = document.forms["userForm"].value;
     if (tomb == "") {
       alert("Üres a tömb.");
       return false;
-    }
+    }*/
     console.log(user);
 }
