@@ -1,0 +1,5 @@
+1.f 15.sorban átirtam a linket
+2.f nem ad másik id-t a képeknek
+3.f az id számát másik számmal növeli
+4.f a 29. sorban lévő hibaüzenetet írja ki
+5.f 15.sorban a link végén a game szót átírtam
