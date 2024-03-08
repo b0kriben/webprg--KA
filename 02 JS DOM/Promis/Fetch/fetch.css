@@ -1,0 +1,13 @@
+body{
+    background-color: rgb(113, 226, 0);
+    color: black;
+    font-weight: bolder;
+    font-size: 60px;
+    text-align: center;
+}
+
+#index{
+    width: 50px;
+    height: 45px;
+    font-size: 40px;
+}
