@@ -14,7 +14,7 @@ fetch('https://jsonplaceholder.org/users/?id=1 ')
   });
 
 function userForm() {
-  let tomb = document.getElementById("buttonId").value;
+  let tomb = document.getElementById("kimenet").value;
 
   for(let i=0; i<=30; i++)
   {
