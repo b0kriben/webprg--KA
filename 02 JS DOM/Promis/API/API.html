@@ -9,11 +9,11 @@
 </head>
 <body>
     
-    <h1>Adja meg a település irányító számát!</h1>
+    <h1 id="h1" for="id">Adja meg a település irányító számát!</h1>
 
-    <input type="text" id="index"><br><br>
+    <input id="id" type="number" min="0" max="9999"><br><br>
 
-    <button onclick="cityForm()" id="buttonId">Város keresése</button><br><br>
+    <button onclick="search()" id="buttonId">Város keresése</button><br><br>
 
     <div id="kimenet"></div>
 

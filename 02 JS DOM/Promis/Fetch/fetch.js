@@ -1,30 +1,43 @@
-fetch('https://jsonplaceholder.org/users/?id=1 ')
-  .then(response => {
-    if (!response.ok) {
-      throw new Error('Network response was not ok');
-    }
-    document.getElementById("id1").innerHTML;
-    return response.json();
-  })
+function search(params) {
+  id = document.getElementById("id").value
+  fetch('https://jsonplaceholder.org/users/?id='+id)
+  .then(response => response.json())
   .then(user => {
     console.log(user);
+    kiiras(user)
   })
   .catch(error => {
-    console.error('There was a problem with the fetch operation:', error);
+  document.getElementById("kimenet").innerHTML="Nem a megfelelő intervallumban adta meg a számot! (1 - 30)" 
   });
+}
 
-function userForm() {
-  let tomb = document.getElementById("kimenet").value;
 
-  for(let i=0; i<=30; i++)
-  {
-    tomb.push(i);
-  }
-  return tomb;
-    /*let tomb = document.forms["userForm"].value;
-    if (tomb == "") {
-      alert("Üres a tömb.");
-      return false;
-    }*/
-    console.log(user);
+
+function kiiras(user) {
+  let ki = document.getElementById("kimenet")
+  ki.innerHTML = "";
+  ki.innerHTML+=("<div>id: " + user.id +"\n</div>")
+  setTimeout(() => {
+    ki.innerHTML+=("<div>Teljes név: " + user.firstname + " " + user.lastname +"\n</div>")
+  setTimeout(() => {
+    ki.innerHTML+=("<div>tel. szám: " + user.phone +"\n</div>")
+    setTimeout(() => {
+  ki.innerHTML+=("<div>email: " + user.email +"\n</div>")
+    setTimeout(() => {
+  ki.innerHTML+=("<div>geolokációs adatok: " + user.address.geo.lat + " " + user.address.geo.lng +"\n</div>")
+      setTimeout(() => {
+  ki.innerHTML+=("<div>weboldal: " + user.website +"\n</div>")
+        setTimeout(() => {
+  ki.innerHTML+=("<div>cégnév: " + user.company.name +"\n</div>")
+          }, 50);
+        }, 50);
+      }, 50);
+    }, 50);
+  }, 50);
+  }, 50);
+
+  document.getElementById("h1").style.display="none";
+  console.log(ki)
+  ki.style.height = "max-content"
+  ki.style.width = "max-content"
 }

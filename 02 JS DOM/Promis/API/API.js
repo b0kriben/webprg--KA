@@ -1,30 +1,30 @@
-fetch('https://hur.webmania.cc/zips/Békés.json/?zip=1 ')
-  .then(response => {
-    if (!response.ok) {
-      throw new Error('Nincs a keresésnek megfelelő találat.');
-    }
-    document.getElementById("zip1").innerHTML;
-    return response.json();
-  })
-  .then(city => {
-    console.log(city);
+function search(params) {
+  cityName = document.getElementById("id").value
+  fetch('https://hur.webmania.cc/zips/'+ cityName+'.json')
+  .then(response => response.json())
+  .then(zips => {
+    console.log(zips);
+    kiiras(zips)
   })
   .catch(error => {
-    console.error('There was a problem with the fetch operation:', error);
+  document.getElementById("kimenet").innerHTML="Nincs a keresésnek megfelelő találat"  
   });
+}
 
-function cityForm() {
-  let tomb = document.getElementById("kimenet").value;
-
-  for(let i=0; i<=9999; i++)
-  {
-    tomb.push(i);
+function kiiras(zips) {
+  let ki = document.getElementById("kimenet")
+  ki.innerHTML = "";
+  let city = []
+  for (let i = 0; i < zips.zips.length; i++) {
+      if (city.includes(zips.zips[i].name)) {
+          continue
+      }
+      ki.innerHTML+=zips.zips[i].zip + ": "
+      ki.innerHTML += zips.zips[i].name + "\n<br>"
+      varosok.push(zips.zips[i].name)  
   }
-  return tomb;
-    /*let tomb = document.forms["cityForm"].value;
-    if (tomb == "") {
-      alert("Üres a tömb.");
-      return false;
-    }*/
-    console.log(city);
+
+  document.getElementById("lab").style.display="none";
+  ki.style.height = "max-content"
+  ki.style.width = "max-content"
 }
