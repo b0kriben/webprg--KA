@@ -1,0 +1,39 @@
+body{
+    background-color: rgb(113, 226, 0);
+    color: black;
+    font-weight: bolder;
+    font-size: 30px;
+    text-align: center;
+}
+
+#id{
+    width: 75px;
+    height: 25px;
+    font-size: 20px;
+}
+
+#buttonId{
+    width: 200px;
+    height: 75px;
+    border-radius: 12px;
+    background-color: red;
+    color: white;
+    font-weight: bolder;
+    font-size: 20px;
+}
+
+#kimenet{
+    border-radius: 12px;
+    background-color: crimson;
+    color: black;
+    width: 500px;
+    height: 400px;
+    margin: auto;
+    font-size: 20px;
+    text-align: start;
+    padding: 5px;
+    max-height: 300px;
+	transition-property: all;
+	transition-duration: .2s;
+	transition-timing-function: cubic-bezier(1, 1, 1, 1);
+}
