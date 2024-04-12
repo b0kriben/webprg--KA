@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kurzusok projekt</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    
+    <div id="container">
+
+        <div class="kurzus">
+
+        </div>
+        
+        <div class="diak">
+
+        </div>
+
+    </div>
+
+    <h1 id="h1" for="idK">Adja meg a kurzus ID-jét!</h1>
+
+    <input id="idK" type="number" min="0" max="99"><br><br>
+
+    <button onclick="searchKurzus()" id="buttonIdK">Kurzus keresése</button><br><br>
+    <button onclick="pushKurzus()" id="buttonIdK">Kurzus hozzáadása</button><br><br>
+    <button onclick="pushStudentToKurzus()" id="buttonIdK">Kurzushoz diák hozzáadása</button><br><br>
+
+    <div id="kimenetKurzus"></div>
+
+
+
+
+    <h1 id="h1" for="idD">Adja meg a diák ID-jét!</h1>
+
+    <input id="idD" type="number" min="0" max="99"><br><br>
+
+    <button onclick="searchDiák()" id="buttonIdD">Diák keresése</button><br><br>
+    <button onclick="updateDiák()" id="buttonIdD">Diák szerkesztése</button><br><br>
+    <button onclick="pushDiák()" id="buttonIdD">Diák hozzáadása</button><br><br>
+    <button onclick="deleteDiák()" id="buttonIdD">Diák törlése</button><br><br>
+
+    <div id="kimenetDiak"></div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
