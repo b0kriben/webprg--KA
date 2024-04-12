@@ -12,25 +12,25 @@ fetch(url)
 
 // Kurzus
 // lekérés
-fetch("https://jsonplaceholder.typicode.com/users&quot" {
+fetch("https://vvri.pythonanywhere.com/api/courses&quot" {
 method: "GET"
 })
     .then(response => response.json())
     .then(json => {
-        let li = `<tr><th>Name</th><th>Email</th></tr>`;
-        json.forEach(user => {
+        let li = `<tr><th>Name</th><th>Students</th></tr>`;
+        json.forEach(course => {
             li += `<tr>
-                <td>${user.name} </td>
-                <td>${user.email}</td>        
+                <td>${course.name} </td>
+                <td>${course.email}</td>        
             </tr>`;
         });
-    document.getElementById("users").innerHTML = li;
+    document.getElementById("courses").innerHTML = li;
 });
 
 
 
 //hozzáadás
-fetch("https://jsonplaceholder.typicode.com/posts/1&quot;" {
+fetch("https://vvri.pythonanywhere.com/api/courses&quot" {
      
     // Metódus hozzáadása
     method: "PUT",
@@ -58,7 +58,7 @@ fetch("https://jsonplaceholder.typicode.com/posts/1&quot;" {
 
 
 // törlés
-fetch("https://jsonplaceholder.typicode.com/posts/1&quot;" {
+fetch("https://vvri.pythonanywhere.com/api/courses&quot" {
      
     // Metódus  hozzáadása
     method: "DELETE",
@@ -90,25 +90,25 @@ fetch("https://jsonplaceholder.typicode.com/posts/1&quot;" {
 
 //Diák
 // lekérés
-fetch("https://jsonplaceholder.typicode.com/users&quot" {
+fetch("https://vvri.pythonanywhere.com/api/courses&quot" {
 method: "GET"
 })
     .then(response => response.json())
     .then(json => {
-        let li = `<tr><th>Name</th><th>Email</th></tr>`;
-        json.forEach(user => {
+        let li = `<tr><th>Name</th></tr>`;
+        json.forEach(student => {
             li += `<tr>
-                <td>${user.name} </td>
-                <td>${user.email}</td>        
+                <td>${student.name} </td>
+                <td>${student.email}</td>        
             </tr>`;
         });
-    document.getElementById("users").innerHTML = li;
+    document.getElementById("students").innerHTML = li;
 });
 
 
 
 //hozzáadás
-fetch("https://jsonplaceholder.typicode.com/posts/1&quot;" {
+fetch("https://vvri.pythonanywhere.com/api/courses&quot" {
      
     // Metódus hozzáadása
     method: "PUT",
@@ -136,7 +136,7 @@ fetch("https://jsonplaceholder.typicode.com/posts/1&quot;" {
 
 
 // törlés
-fetch("https://jsonplaceholder.typicode.com/posts/1&quot;" {
+fetch("https://vvri.pythonanywhere.com/api/courses&quot" {
      
     // Metódus  hozzáadása
     method: "DELETE",
