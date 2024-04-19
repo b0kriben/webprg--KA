@@ -14,7 +14,7 @@ fetch("https://jsonplaceholder.typicode.com/todos")
 
 
 //POST metódus
-fetch("https://jsonplaceholder.typicode.com/todos"{
+fetch("https://jsonplaceholder.typicode.com/todos", {
      
     // Metódus hozzáadása
     method: "POST",
@@ -39,7 +39,7 @@ fetch("https://jsonplaceholder.typicode.com/todos"{
 
 
 //PUT metódus
-fetch("https://jsonplaceholder.typicode.com/todos/4"{
+fetch("https://jsonplaceholder.typicode.com/todos/4", {
      
     // Metódus hozzáadása
     method: "PUT",
@@ -66,7 +66,7 @@ fetch("https://jsonplaceholder.typicode.com/todos/4"{
 
 
 //PATCH metódus
-fetch("https://jsonplaceholder.typicode.com/todos/1" {
+fetch("https://jsonplaceholder.typicode.com/todos/1", {
      
     // Metódus hozzáadása
     method: "PATCH",
@@ -92,7 +92,7 @@ fetch("https://jsonplaceholder.typicode.com/todos/1" {
 
 
 //DELETE metódus
-fetch("https://jsonplaceholder.typicode.com/todos"{
+fetch("https://jsonplaceholder.typicode.com/todos", {
      
     // Metódus  hozzáadása
     method: "DELETE",

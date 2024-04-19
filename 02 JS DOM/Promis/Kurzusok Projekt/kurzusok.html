@@ -8,24 +8,26 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+
+    <h1>Kurzusok az iskolában és annak diákjai.</h1>
     
     <div id="container">
 
         <div class="kurzus item">
-            <h1 id="h1" for="idK">Adja meg a kurzus ID-jét!</h1>
+            <h2 id="h2" for="idK">Adja meg a kurzus ID-jét!</h2>
             <input id="idK" type="number" min="0" max="99"><br><br>
-            <button onclick="searchKurzus()" class="buttonId" id="buttonIdK1">Kurzus keresése</button><br><br>
-            <button onclick="pushKurzus()" class="buttonId" id="buttonIdK2">Kurzus hozzáadása</button><br><br>
+            <button onclick="searchKurzus()" class="buttonC" id="buttonIdK1">Kurzus keresése</button><br><br>
+            <button onclick="pushKurzus()" class="buttonC" id="buttonIdK2">Kurzus hozzáadása</button><br><br>
             <div id="kimenetKurzus"></div>
         </div>
         
         <div class="diak item">
-            <h1 id="h1" for="idD">Adja meg a diák ID-jét!</h1>
+            <h2 id="h2" for="idD">Adja meg a diák ID-jét!</h2>
             <input id="idD" type="number" min="0" max="99"><br><br>
-            <button onclick="searchDiák()" class="buttonId" id="buttonIdD1">Diák keresése</button><br><br>
-            <button onclick="updateDiák()" class="buttonId" id="buttonIdD2">Diák szerkesztése</button><br><br>
-            <button onclick="pushDiák()" class="buttonId" id="buttonIdD3">Diák hozzáadása</button><br><br>
-            <button onclick="deleteDiák()" class="buttonId" id="buttonIdD4">Diák törlése</button><br><br>
+            <button onclick="searchDiák()" class="buttonC" id="buttonIdD1">Diák keresése</button><br><br>
+            <button onclick="updateDiák()" class="buttonC" id="buttonIdD2">Diák szerkesztése</button><br><br>
+            <button onclick="pushDiák()" class="buttonC" id="buttonIdD3">Diák hozzáadása</button><br><br>
+            <button onclick="deleteDiák()" class="buttonC" id="buttonIdD4">Diák törlése</button><br><br>
             <div id="kimenetDiak"></div>
         </div>
 

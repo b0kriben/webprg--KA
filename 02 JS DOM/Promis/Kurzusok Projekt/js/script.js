@@ -44,7 +44,7 @@
   }
   
   function kiirasDiak(zips) {
-    let ki = document.getElementById("kimenetKurzus")
+    let ki = document.getElementById("kimenetDiak")
     ki.innerHTML = "";
     let student = []
     for (let i = 0; i < zips.zips.length; i++) {
@@ -67,7 +67,7 @@
 // Kurzus
 // lekérés
 function searchKurzus(params){
-    fetch("https://vvri.pythonanywhere.com/api/courses&quot" {
+    fetch("https://vvri.pythonanywhere.com/api/courses&quot", {
     method: "GET"})
         .then(response => response.json())
         .then(json => {
@@ -78,14 +78,14 @@ function searchKurzus(params){
                     <td>${course.students}</td>        
                 </tr>`;
             })
+        .catch(error => console.log("Nincs a keresésnek megfelelő találat"))
         document.getElementById("users").innerHTML = li;
-        //.catch(error => console.log("Nincs a keresésnek megfelelő találat"))
     })
 }
 
 //hozzáadás
 function pushKurzus(params){
-    fetch("https://vvri.pythonanywhere.com/api/courses&quot" {
+    fetch("https://vvri.pythonanywhere.com/api/courses&quot", {
         method: "PUT",
 
         body: JSON.stringify({
@@ -98,16 +98,34 @@ function pushKurzus(params){
         }
     })
     .then(response => response.json())
-    .then(json => console.log(json));
+    .then(json => console.log(json))
+    .catch(error => console.log("Nem sikerült jozzáadni az adatot"))
 }
 
-
+// kiiras
+function kiirasKurzus(json) {
+    let ki = document.getElementById("kimenetKurzus")
+    ki.innerHTML = "";
+    let course = []
+    for (let i = 0; i < json.json.length; i++) {
+        if (course.includes(json.json[i].name)) {
+            continue
+        }
+        ki.innerHTML+= json.json[i].json + ": "
+        ki.innerHTML += json.json[i].name + "\n<br>"
+        kurzusok.push(json.json[i].name)  
+    }
+  
+    document.getElementById("lab").style.display="none";
+    ki.style.height = "max-content"
+    ki.style.width = "max-content"
+  }
 
 
 //Diák
 // lekérés
 function searchDiak(params){
-    fetch("https://vvri.pythonanywhere.com/api/courses&quot" {
+    fetch("https://vvri.pythonanywhere.com/api/courses&quot", {
     method: "GET"
     })
         .then(response => response.json())
@@ -117,14 +135,15 @@ function searchDiak(params){
                 li += `<tr>
                     <td>${student.name} </td>       
                 </tr>`;
-            });
+            })
+        .catch(error => console.log("Nincs a keresésnek megfelelő találat"))
         document.getElementById("users").innerHTML = li;
-    });
+    })
 }
 
 // adatok hozzáadása
 function updateDiak(params){
-    fetch("https://vvri.pythonanywhere.com/api/courses&quot" {
+    fetch("https://vvri.pythonanywhere.com/api/courses&quot", {
     method: "PATCH",
 
     body: JSON.stringify({
@@ -136,12 +155,13 @@ function updateDiak(params){
     }
     })
     .then(response => response.json())
-    .then(json => console.log(json));
+    .then(json => console.log(json))
+    .catch(error => console.log("Nem sikerült változtatni az adaton"))
 }
 
 //hozzáadás
 function pushDiak(params){
-    fetch("https://vvri.pythonanywhere.com/api/courses&quot" {
+    fetch("https://vvri.pythonanywhere.com/api/courses&quot", {
         method: "PUT",
         body: JSON.stringify({
             id: 1,
@@ -152,12 +172,13 @@ function pushDiak(params){
         }
     })
     .then(response => response.json())
-    .then(json => console.log(json));
+    .then(json => console.log(json))
+    .catch(error => console.log("Nem sikerült hozzáadniaz adatot"))
 }
 
 // törlés
 function deleteDiak(params){
-    fetch("https://vvri.pythonanywhere.com/api/courses&quot" {
+    fetch("https://vvri.pythonanywhere.com/api/courses&quot", {
         method: "DELETE",
 
         headers: {
@@ -173,3 +194,22 @@ function deleteDiak(params){
     .then(json => console.log(json))
     .catch(error => console.error('There was a problem with the fetch operation:', error));
 }
+
+// kiiras
+function kiirasDiak(json) {
+    let ki = document.getElementById("kimenetDiak")
+    ki.innerHTML = "";
+    let student = []
+    for (let i = 0; i < json.json.length; i++) {
+        if (student.includes(json.json[i].name)) {
+            continue
+        }
+        ki.innerHTML+=json.json[i].json + ": "
+        ki.innerHTML += json.json[i].name + "\n<br>"
+        tanulok.push(json.json[i].name)  
+    }
+  
+    document.getElementById("lab").style.display="none";
+    ki.style.height = "max-content"
+    ki.style.width = "max-content"
+  }
