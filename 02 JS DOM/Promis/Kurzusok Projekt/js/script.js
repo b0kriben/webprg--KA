@@ -21,10 +21,10 @@ method: "GET"
         json.forEach(course => {
             li += `<tr>
                 <td>${course.name} </td>
-                <td>${course.email}</td>        
+                <td>${course.students}</td>        
             </tr>`;
         });
-    document.getElementById("courses").innerHTML = li;
+    document.getElementById("users").innerHTML = li;
 });
 
 
@@ -38,9 +38,8 @@ fetch("https://vvri.pythonanywhere.com/api/courses&quot" {
     // Küldendő test vagy tartalom hozzáadása
     body: JSON.stringify({
         id: 1,
-        title: "foo",
-        body: "bar",
-        userId: 1
+        name: "matek",
+        students: [ id, nameStudents],
     }),
      
     // Fejlécek hozzáadása a kéréshez
@@ -98,11 +97,10 @@ method: "GET"
         let li = `<tr><th>Name</th></tr>`;
         json.forEach(student => {
             li += `<tr>
-                <td>${student.name} </td>
-                <td>${student.email}</td>        
+                <td>${student.name} </td>       
             </tr>`;
         });
-    document.getElementById("students").innerHTML = li;
+    document.getElementById("users").innerHTML = li;
 });
 
 
@@ -116,9 +114,7 @@ fetch("https://vvri.pythonanywhere.com/api/courses&quot" {
     // Küldendő test vagy tartalom hozzáadása
     body: JSON.stringify({
         id: 1,
-        title: "foo",
-        body: "bar",
-        userId: 1
+        name: "Arany János",
     }),
      
     // Fejlécek hozzáadása a kéréshez
