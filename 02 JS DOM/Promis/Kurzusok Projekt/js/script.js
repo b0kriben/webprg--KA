@@ -12,7 +12,7 @@ fetch(url)
 
 // Kurzus
 // lekérés
-fetch("https://vvri.pythonanywhere.com/api/courses&quot" {
+searchKurzus("https://vvri.pythonanywhere.com/api/courses&quot" {
 method: "GET"
 })
     .then(response => response.json())
@@ -30,58 +30,20 @@ method: "GET"
 
 
 //hozzáadás
-fetch("https://vvri.pythonanywhere.com/api/courses&quot" {
-     
-    // Metódus hozzáadása
+pushKurzus("https://vvri.pythonanywhere.com/api/courses&quot" {
     method: "PUT",
-     
-    // Küldendő test vagy tartalom hozzáadása
+
     body: JSON.stringify({
         id: 1,
         name: "matek",
         students: [ id, nameStudents],
     }),
-     
-    // Fejlécek hozzáadása a kéréshez
     headers: {
         "Content-type": "application/json; charset=UTF-8"
     }
 })
- 
-// Konvertálás JSON-ba
 .then(response => response.json())
- 
-// Az eredmények megjelenítése a konzolon
 .then(json => console.log(json));
-
-
-
-// törlés
-fetch("https://vvri.pythonanywhere.com/api/courses&quot" {
-     
-    // Metódus  hozzáadása
-    method: "DELETE",
-     
-    // Fejlécek hozzáadása a kéréshez
-    headers: {
-        "Content-type": "application/json; charset=UTF-8"
-    }
-})
- 
-// Konvertálás JSON-ba
-.then(response => {
-    // Ha a válasz státusza OK, akkor visszatérünk egy üres JSON objektummal
-    if (response.ok) {
-        return response.json();
-    }
-    // Ha a válasz státusza nem OK, akkor dobunk egy hibát
-    throw new Error('Network response was not ok.');
-})
- 
-// Az eredmények megjelenítése a konzolon
-.then(json => console.log(json))
-// Hibakezelés
-.catch(error => console.error('There was a problem with the fetch operation:', error));
 
 
 
@@ -89,7 +51,7 @@ fetch("https://vvri.pythonanywhere.com/api/courses&quot" {
 
 //Diák
 // lekérés
-fetch("https://vvri.pythonanywhere.com/api/courses&quot" {
+searchDiák("https://vvri.pythonanywhere.com/api/courses&quot" {
 method: "GET"
 })
     .then(response => response.json())
@@ -104,56 +66,52 @@ method: "GET"
 });
 
 
+// adatok hozzáadása
+updateDiák("https://vvri.pythonanywhere.com/api/courses&quot" {
+method: "PATCH",
+
+body: JSON.stringify({
+title: "foo",
+body: "bar"
+}),
+headers: {
+"Content-type": "application/json; charset=UTF-8"
+}
+})
+.then(response => response.json())
+.then(json => console.log(json));
+
+
 
 //hozzáadás
-fetch("https://vvri.pythonanywhere.com/api/courses&quot" {
-     
-    // Metódus hozzáadása
+pushDiák("https://vvri.pythonanywhere.com/api/courses&quot" {
     method: "PUT",
-     
-    // Küldendő test vagy tartalom hozzáadása
     body: JSON.stringify({
         id: 1,
         name: "Arany János",
     }),
-     
-    // Fejlécek hozzáadása a kéréshez
     headers: {
         "Content-type": "application/json; charset=UTF-8"
     }
 })
- 
-// Konvertálás JSON-ba
 .then(response => response.json())
- 
-// Az eredmények megjelenítése a konzolon
 .then(json => console.log(json));
 
 
 
 // törlés
-fetch("https://vvri.pythonanywhere.com/api/courses&quot" {
-     
-    // Metódus  hozzáadása
+deleteDiák("https://vvri.pythonanywhere.com/api/courses&quot" {
     method: "DELETE",
-     
-    // Fejlécek hozzáadása a kéréshez
+
     headers: {
         "Content-type": "application/json; charset=UTF-8"
     }
 })
- 
-// Konvertálás JSON-ba
 .then(response => {
-    // Ha a válasz státusza OK, akkor visszatérünk egy üres JSON objektummal
     if (response.ok) {
         return response.json();
     }
-    // Ha a válasz státusza nem OK, akkor dobunk egy hibát
     throw new Error('Network response was not ok.');
 })
- 
-// Az eredmények megjelenítése a konzolon
 .then(json => console.log(json))
-// Hibakezelés
 .catch(error => console.error('There was a problem with the fetch operation:', error));
