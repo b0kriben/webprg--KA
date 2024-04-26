@@ -67,13 +67,14 @@
 // Kurzus
 // lekérés
 function searchKurzus(params){
-    fetch("https://vvri.pythonanywhere.com/api/courses&quot", {
+    fetch("https://vvri.pythonanywhere.com/api/courses&quot" /*+ id*/, {
     method: "GET"})
         .then(response => response.json())
         .then(json => {
-            let li = `<tr><th>Name</th><th>Students</th></tr>`;
+            let li = `<tr><th>Id</th><th>Name</th><th>Students</th></tr>`;
             json.forEach(course => {
                 li += `<tr>
+                    <td>${course.id}</td>
                     <td>${course.name} </td>
                     <td>${course.students}</td>        
                 </tr>`;
@@ -91,7 +92,7 @@ function pushKurzus(params){
         body: JSON.stringify({
             id: 1,
             name: "matek",
-            students: [ id, nameStudents],
+            students: [ id, student.name /*nameStudents*/],
         }),
         headers: {
             "Content-type": "application/json; charset=UTF-8"
@@ -115,7 +116,7 @@ function kiirasKurzus(json) {
         ki.innerHTML += json.json[i].name + "\n<br>"
         kurzusok.push(json.json[i].name)  
     }
-  
+
     document.getElementById("lab").style.display="none";
     ki.style.height = "max-content"
     ki.style.width = "max-content"
@@ -133,6 +134,7 @@ function searchDiak(params){
             let li = `<tr><th>Name</th></tr>`;
             json.forEach(student => {
                 li += `<tr>
+                    <td>${student.id}</td>
                     <td>${student.name} </td>       
                 </tr>`;
             })
