@@ -67,22 +67,28 @@
 // Kurzus
 // lekérés
 function searchKurzus(params){
-    fetch("https://vvri.pythonanywhere.com/api/courses&quot" /*+ id*/, {
+    fetch("https://vvri.pythonanywhere.com/api/courses/" + 1, {
     method: "GET"})
+
         .then(response => response.json())
-        .then(json => {
+        .then(course => {
             let li = `<tr><th>Id</th><th>Name</th><th>Students</th></tr>`;
-            json.forEach(course => {
+
                 li += `<tr>
                     <td>${course.id}</td>
                     <td>${course.name} </td>
-                    <td>${course.students}</td>        
-                </tr>`;
+                    </tr>`;
+                course.students.forEach(student => {
+                    li+=`<tr>
+                        <td>${student.id}</td>  
+                        <td>${student.name}</td>
+                        </tr>`;
+                })
+                 document.getElementById("kimenetKurzus").innerHTML += li;
             })
-        .catch(error => console.log("Nincs a keresésnek megfelelő találat"))
-        document.getElementById("users").innerHTML = li;
-    })
-}
+        .catch(error => console.log("Nincs a keresésnek megfelelő találat"+error))
+        // document.getElementById("users").innerHTML = li;
+    }
 
 //hozzáadás
 function pushKurzus(params){
@@ -116,7 +122,6 @@ function kiirasKurzus(json) {
         ki.innerHTML += json.json[i].name + "\n<br>"
         kurzusok.push(json.json[i].name)  
     }
-
     document.getElementById("lab").style.display="none";
     ki.style.height = "max-content"
     ki.style.width = "max-content"
