@@ -12,23 +12,24 @@
     <h1>Kurzusok az iskolában és annak diákjai.</h1>
     
     <div id="container">
-        <h2 id="h2" for="idK">Adja meg a kurzus ID-jét!</h2><br>
 
         <div class="kurzus item">
-            Id: <input id="idNumber" type="number" min="0" max="9999"><br><br>
-            Bevitel: <input id="idString" type="string" min="0" max="9999"><br><br>
+            <h2 id="h2" for="idK">Adja meg a kurzus ID-jét!</h2>
+            <input id="idK" type="number" min="0" max="99"><br><br>
             <button onclick="searchKurzus()" class="buttonC" id="buttonIdK1">Kurzus keresése</button><br><br>
             <button onclick="pushKurzus()" class="buttonC" id="buttonIdK2">Kurzus hozzáadása</button><br><br>
+            <div id="kimenetKurzus"  class="kimenetK"></div>
         </div>
-
+        
         <div class="diak item">
+            <h2 id="h2" for="idD">Adja meg a diák ID-jét!</h2>
+            <input id="idD" type="number" min="0" max="99"><br><br>
             <button onclick="searchDiák()" class="buttonC" id="buttonIdD1">Diák keresése</button><br><br>
             <button onclick="updateDiák()" class="buttonC" id="buttonIdD2">Diák szerkesztése</button><br><br>
             <button onclick="pushDiák()" class="buttonC" id="buttonIdD3">Diák hozzáadása</button><br><br>
             <button onclick="deleteDiák()" class="buttonC" id="buttonIdD4">Diák törlése</button><br><br>
+            <div id="kimenetDiak" class="kimenetD"></div>
         </div>
-        
-        <div id="kimenetKurzus"  class="kimenetK"></div>
 
     </div>
 

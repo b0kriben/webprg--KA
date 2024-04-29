@@ -16,17 +16,16 @@ h1{
 
 h2{
     font-weight: bold;
-    flex: 25%;
 }
 
 #container{
     width: 100%;
-    height: auto;
+    height: 1000px;
     display: flex;
     background-color: rgb(255, 196, 0);
     border-radius: 40px;
     flex-direction: row;
-    padding: 20px;
+    padding: 5px;
 }
 
 .item{
@@ -34,20 +33,17 @@ h2{
 }
 
 .kurzus{
-    flex: 25%;
+    flex: 1;
 }
+
 .diak{
-    flex: 25%;
+    border-left: black 10px solid;
+    flex: 1;
 }
 
 /*Kurzus*/
-#idNumber{
+#idK{
     width: 75px;
-    height: 25px;
-    font-size: 20px;
-}
-#idString{
-    width: 200px;
     height: 25px;
     font-size: 20px;
 }
@@ -67,7 +63,6 @@ h2{
     color: black;
 }
 .kimenetK{
-    flex: 35%;
     border-radius: 12px;
     background-color: yellowgreen;
     color: black;
@@ -77,6 +72,7 @@ h2{
     font-size: 20px;
     text-align: start;
     padding: 5px;
+    max-height: 300px;
 	transition-property: all;
 	transition-duration: .2s;
 	transition-timing-function: cubic-bezier(1, 1, 1, 1);
@@ -110,4 +106,19 @@ h2{
 #buttonIdD4{
     background-color: red;
     color: black;
+}
+.kimenetD{
+    border-radius: 12px;
+    background-color: yellowgreen;
+    color: black;
+    width: 400px;
+    height: auto;
+    margin: auto;
+    font-size: 20px;
+    text-align: start;
+    padding: 5px;
+    max-height: 300px;
+	transition-property: all;
+	transition-duration: .2s;
+	transition-timing-function: cubic-bezier(1, 1, 1, 1);
 }
