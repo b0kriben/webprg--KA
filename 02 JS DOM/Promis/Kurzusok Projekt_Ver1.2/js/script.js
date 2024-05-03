@@ -84,7 +84,7 @@ function load() {
         });
 }
 
-//Kurzus készítése
+//Kurzus létrehozása
 function createCourse(event) {
     event.preventDefault();
     let courseName = document.getElementById('courseName').value;
@@ -101,7 +101,6 @@ function createCourse(event) {
         })
         .catch(error => console.log('Hiba történt: ' + error));
 }
-
 
 //Diák hozzáadása
 function addStudent(courseId, studentName) {

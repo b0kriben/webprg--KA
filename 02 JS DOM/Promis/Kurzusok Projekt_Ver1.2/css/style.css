@@ -1,7 +1,6 @@
 body {
     background-color: rgb(0, 247, 255);
     padding: 10px;
-    font-weight: bolder;
 }
 
 /*h1{
@@ -24,6 +23,12 @@ h1{
     border-radius: 100px;
     text-align: center;
     padding: 5px;
+}
+
+p{
+    font-weight: bolder;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 22px;
 }
 
 .h1div{
@@ -61,7 +66,6 @@ button {
     color: white;
     font-weight: bold;
     padding: 10px 15px;
-    /*border: none;*/
     border: 2px black solid;
     border-radius: 5px;
     cursor: pointer;
@@ -86,7 +90,7 @@ li {
     font-size: large;
 }
 
-li li {
+li li{
     background-color: rgb(36, 28, 67);
     padding: 15px;
     margin: 5px 0;
@@ -95,7 +99,14 @@ li li {
     font-size: medium;
 }
 
-
+li li:hover{
+    background-color: rgb(25, 9, 78);
+    padding: 15px;
+    margin: 5px 0;
+    border-radius: 10px;
+    color: white;
+    font-size: medium;
+}
 
 input[type="text"] {
     padding: 8px;
