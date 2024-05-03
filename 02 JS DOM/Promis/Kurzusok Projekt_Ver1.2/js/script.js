@@ -9,8 +9,8 @@ function search() {
     let courses = document.querySelectorAll("#list > li");
     courses.forEach(course => {
         let courseName = course.firstChild.textContent.toLowerCase();
-        let sList = course.querySelector('ul');
-        let students = sList.querySelectorAll('li');
+        let stringList = course.querySelector('ul');
+        let students = stringList.querySelectorAll('li');
         if (!src) {
             course.style.display = "block";
             students.forEach(student => {
@@ -51,19 +51,19 @@ function load() {
             data.forEach(course => {
                 let li = document.createElement('li');
                 li.innerHTML = '(' + course.id + ') ' + course.name;
-                let sList = document.createElement('ul');
+                let stringList = document.createElement('ul');
                 course.students.forEach(student => {
-                    let sLi = document.createElement('li');
-                    sLi.textContent = '(' + student.id + ') ' + student.name;
+                    let stringLi = document.createElement('li');
+                    stringLi.textContent = '(' + student.id + ') ' + student.name;
                     let editB = document.createElement('button');
                     editB.textContent = 'Szerkesztés';
                     editB.onclick = () => editStudent(student.id, student.name, course.id);
                     let deleteB = document.createElement('button');
                     deleteB.textContent = 'Törlés';
                     deleteB.onclick = () => deleteStudent(student.id);
-                    sLi.appendChild(editB);
-                    sLi.appendChild(deleteB);
-                    sList.appendChild(sLi);
+                    stringLi.appendChild(editB);
+                    stringLi.appendChild(deleteB);
+                    stringList.appendChild(stringLi);
                 });
                 let addStudentC = document.createElement('input');
                 addStudentC.type = "text";
@@ -71,7 +71,7 @@ function load() {
                 let addStudentButton = document.createElement('button');
                 addStudentButton.textContent = "Diák hozzáadása";
                 addStudentButton.onclick = () => addStudent(course.id, addStudentC.value);
-                li.appendChild(sList);
+                li.appendChild(stringList);
                 li.appendChild(addStudentC);
                 li.appendChild(addStudentButton);
                 list.appendChild(li);
