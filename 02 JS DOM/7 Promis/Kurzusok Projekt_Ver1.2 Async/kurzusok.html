@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kurzusok projekt</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <div class="h1div">
+        <h1>Kurzusok az iskolában és azoknak a diákjai.</h1>
+    </div>
+    
+    <div class="container">
+
+        <div class="szovegEsGombok">
+
+            <p>Keresés kurzus név alapján:</p>           
+            <div class="topbar">
+                <form>
+                    <input type="text" id="kereses" placeholder="Keresés..." autocomplete="off">
+                </form>
+            </div>
+
+            <div class="ures"></div>
+
+            <div class="fejlec">
+                <div class="fejlecitem">
+                    <button id="betolt">Kurzusok betöltése</button>
+                </div>
+                <div id="betoltes" style="display: none;">
+                </div>
+                <div class="fejlecitem">
+                    <form id="newCourse">
+                        <input type="text" id="courseName" placeholder="Új kurzus neve" required><br><br>
+                        <button type="submit">Kurzus létrehozása</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <div class="lista">
+            <ul id="list"></ul>
+        </div>
+    </div>    
+
+    <script src="js/script.js"></script>
+</body>
+</html>
