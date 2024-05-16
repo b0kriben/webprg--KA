@@ -55,48 +55,42 @@ async function load() {
             data.forEach(element => {
                 console.log(element)
         })
-        .then(data => {
-            let list = document.getElementById('list');
-            list.innerHTML = '';
-            data.forEach(course => {
-                let li = document.createElement('li');
-                li.innerHTML = '(' + course.id + ') ' + course.name;
-                let stringList = document.createElement('ul');
-                course.students.forEach(student => {
-                    let stringLi = document.createElement('li');
-                    stringLi.textContent = '(' + student.id + ') ' + student.name;
-                    let editB = document.createElement('button');
-                    editB.textContent = 'Szerkesztés';
-                    editB.onclick = () => editStudent(student.id, student.name, course.id);
-                    let deleteB = document.createElement('button');
-                    deleteB.textContent = 'Törlés';
-                    deleteB.onclick = () => deleteStudent(student.id);
-                    stringLi.appendChild(editB);
-                    stringLi.appendChild(deleteB);
-                    stringList.appendChild(stringLi);
-                });
-                let addStudentC = document.createElement('input');
-                addStudentC.type = "text";
-                addStudentC.placeholder = "Új diák hozzáadása";
-                let addStudentButton = document.createElement('button');
-                addStudentButton.textContent = "Diák hozzáadása";
-                addStudentButton.onclick = () => addStudent(course.id, addStudentC.value);
-                li.appendChild(stringList);
-                li.appendChild(addStudentC);
-                li.appendChild(addStudentButton);
-                list.appendChild(li);
-            });
-            document.getElementById("betoltes").style.display = "none";
-        })
-        .catch(error => {
+        } catch (error) {
             console.log('Hiba történt: ' + error);
             document.getElementById("betoltes").style.display = "none";
+        }
+        let list = document.getElementById('list');
+        list.innerHTML = '';
+        data.forEach(course => {
+            let li = document.createElement('li');
+            li.innerHTML = '(' + course.id + ') ' + course.name;
+            let stringList = document.createElement('ul');
+            course.students.forEach(student => {
+                let stringLi = document.createElement('li');
+                stringLi.textContent = '(' + student.id + ') ' + student.name;
+                let editB = document.createElement('button');
+                editB.textContent = 'Szerkesztés';
+                editB.onclick = () => editStudent(student.id, student.name, course.id);
+                let deleteB = document.createElement('button');
+                deleteB.textContent = 'Törlés';
+                deleteB.onclick = () => deleteStudent(student.id);
+                stringLi.appendChild(editB);
+                stringLi.appendChild(deleteB);
+                stringList.appendChild(stringLi);
+            });
+            let addStudentC = document.createElement('input');
+            addStudentC.type = "text";
+            addStudentC.placeholder = "Új diák hozzáadása";
+            let addStudentButton = document.createElement('button');
+            addStudentButton.textContent = "Diák hozzáadása";
+            addStudentButton.onclick = () => addStudent(course.id, addStudentC.value);
+            li.appendChild(stringList);
+            li.appendChild(addStudentC);
+            li.appendChild(addStudentButton);
+            list.appendChild(li);
         });
+        document.getElementById("betoltes").style.display = "none";  
     }
-    catch(error) { 
-        console.log("Hiba történt: " + error)
-    }
-}
 
 //Kurzus létrehozása
 async function createCourse(event) {
