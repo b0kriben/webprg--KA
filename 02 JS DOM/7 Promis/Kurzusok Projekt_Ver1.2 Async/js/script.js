@@ -55,12 +55,9 @@ async function load() {
             data.forEach(element => {
                 console.log(element)
         })
-        } catch (error) {
-            console.log('Hiba történt: ' + error);
-            document.getElementById("betoltes").style.display = "none";
-        }
         let list = document.getElementById('list');
         list.innerHTML = '';
+        console.log(data);
         data.forEach(course => {
             let li = document.createElement('li');
             li.innerHTML = '(' + course.id + ') ' + course.name;
@@ -90,6 +87,10 @@ async function load() {
             list.appendChild(li);
         });
         document.getElementById("betoltes").style.display = "none";  
+        } catch (error) {
+            console.log('Hiba történt: ' + error);
+            document.getElementById("betoltes").style.display = "none";
+        }
     }
 
 //Kurzus létrehozása
