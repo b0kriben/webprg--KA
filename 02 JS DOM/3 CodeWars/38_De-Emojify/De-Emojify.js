@@ -14,7 +14,6 @@ const deEmojify = (string) => {
         ':(': 9
     };
 
-
     return string.split('  ')
         .map(str => str.split(' '))
         .map(arr => arr.map(str => emotion[str]).join(''))

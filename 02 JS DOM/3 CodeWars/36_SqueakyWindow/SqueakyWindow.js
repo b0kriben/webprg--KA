@@ -6,4 +6,4 @@ function sliding(nums, k) {
    }
    return t;
   },[]);
-}
+};
