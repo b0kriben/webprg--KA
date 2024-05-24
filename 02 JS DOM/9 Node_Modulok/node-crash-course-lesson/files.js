@@ -48,4 +48,5 @@ if (fs.existsSync('./docs/deleteme.txt')) {
 }
 
 console.log(os.platform()); 
+console.log(os.version()); 
 console.log(os.homedir());
