@@ -4,8 +4,7 @@ document.getElementById("kereses").addEventListener("input", search);
 
 
 //Kurzus keresés
-async function search() {
-    try{
+function search() {
         let src = document.getElementById("kereses").value.toLowerCase();
         let courses = document.querySelectorAll("#list > li");
         courses.forEach(course => {
@@ -37,11 +36,7 @@ async function search() {
                 course.style.display = result ? "block" : "none";
             }
         }
-        });
-    }
-    catch(error) { 
-        console.log("Hiba történt: " + error)
-    }
+    });
 }
 
 
