@@ -73,8 +73,8 @@ console.log(dnaStrand(""))
  * A bemenet mindig érvényes lesz. A láncok nullákkal is kezdődhetnek; ezek érvényesek, és nem változtatják meg a lánc értékét.
  * @param {string} emojiString az emoji érzelemlánc
 */
-const deEmojify = (emoyiString) => {
-    if (!emoyiString) return '';
+const deEmojify = (emojiString) => {
+    if (!emojiString) return '';
 
     const emotion = {
         ':)': 0,
@@ -89,7 +89,7 @@ const deEmojify = (emoyiString) => {
         ':(': 9
     };
 
-    return emoyiString.split('  ')
+    return emojiString.split('  ')
         .map(str => str.split(' '))
         .map(arr => arr.map(str => emotion[str]).join(''))
         .map(num => String.fromCodePoint(num))
